@@ -17,12 +17,33 @@ namespace Marksheet
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {            
+            Global.frmAddStudent=new Frm_Add_student();
+            Global.frmAddStudent.Show();
+        }
+
+        private void btnAddSubject_Click(object sender, EventArgs e)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Add_student());
+            Global.frmAddSubjects = new frm_Add_Subjects();
+
+            Global.frmAddSubjects.Show();
 
         }
+
+        private void btnEnterMarks_Click(object sender, EventArgs e)
+        {
+            Global.frmInesrtMarks = new Frm_insert_marks();
+            Global.frmInesrtMarks.Show();
+        }
+
+        private void btnSeeMarks_Click(object sender, EventArgs e)
+        {
+            Global.frmDisplayMarks = new Frm_Display_Marks();
+            Global.frmDisplayMarks.Show();
+  
+        }
+
+ 
     }
 }

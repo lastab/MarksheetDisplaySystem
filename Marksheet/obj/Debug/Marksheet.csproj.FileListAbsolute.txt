@@ -1,7 +1,6 @@
 c:\users\user\documents\visual studio 2012\Projects\Marksheet\Marksheet\bin\Debug\Marksheet.exe.config
 C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.Frm_Add_student.resources
-C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.Add_Subjects.resources
 C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.Frm_insert_marks.resources
 C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.Frm_Menu.resources
 C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.Properties.Resources.resources
@@ -11,3 +10,4 @@ C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\bin\Debu
 C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.exe
 C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.pdb
 C:\Users\User\documents\visual studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.Frm_Display_Marks.resources
+C:\Users\User\documents\visual studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.frm_Add_Subjects.resources

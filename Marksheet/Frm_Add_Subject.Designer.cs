@@ -1,6 +1,6 @@
 ﻿namespace Marksheet
 {
-    partial class Add_Subjects
+    partial class frm_Add_Subjects
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSubjectCode = new System.Windows.Forms.TextBox();
+            this.txtSubjectName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cbCreditHour = new System.Windows.Forms.ComboBox();
+            this.cbHasPractical = new System.Windows.Forms.CheckBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -50,21 +50,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Subject Code";
             // 
-            // textBox1
+            // txtSubjectCode
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(216, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 38);
-            this.textBox1.TabIndex = 1;
+            this.txtSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubjectCode.Location = new System.Drawing.Point(216, 63);
+            this.txtSubjectCode.Name = "txtSubjectCode";
+            this.txtSubjectCode.Size = new System.Drawing.Size(100, 38);
+            this.txtSubjectCode.TabIndex = 1;
             // 
-            // textBox2
+            // txtSubjectName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(216, 111);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 38);
-            this.textBox2.TabIndex = 3;
+            this.txtSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubjectName.Location = new System.Drawing.Point(216, 111);
+            this.txtSubjectName.Name = "txtSubjectName";
+            this.txtSubjectName.Size = new System.Drawing.Size(100, 38);
+            this.txtSubjectName.TabIndex = 3;
             // 
             // label2
             // 
@@ -86,50 +86,50 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Credit Hour";
             // 
-            // comboBox1
+            // cbCreditHour
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbCreditHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCreditHour.FormattingEnabled = true;
+            this.cbCreditHour.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.comboBox1.Location = new System.Drawing.Point(216, 155);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(48, 39);
-            this.comboBox1.TabIndex = 6;
+            this.cbCreditHour.Location = new System.Drawing.Point(216, 155);
+            this.cbCreditHour.Name = "cbCreditHour";
+            this.cbCreditHour.Size = new System.Drawing.Size(48, 39);
+            this.cbCreditHour.TabIndex = 6;
             // 
-            // checkBox1
+            // cbHasPractical
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(53, 200);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(194, 35);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Has Practical";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbHasPractical.AutoSize = true;
+            this.cbHasPractical.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHasPractical.Location = new System.Drawing.Point(53, 200);
+            this.cbHasPractical.Name = "cbHasPractical";
+            this.cbHasPractical.Size = new System.Drawing.Size(194, 35);
+            this.cbHasPractical.TabIndex = 7;
+            this.cbHasPractical.Text = "Has Practical";
+            this.cbHasPractical.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(66, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 35);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(66, 262);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(77, 35);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(172, 262);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 35);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(172, 262);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(92, 35);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -141,22 +141,22 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Enter Subject Details";
             // 
-            // Add_Subjects
+            // frm_Add_Subjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 315);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.cbHasPractical);
+            this.Controls.Add(this.cbCreditHour);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSubjectName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSubjectCode);
             this.Controls.Add(this.label1);
-            this.Name = "Add_Subjects";
+            this.Name = "frm_Add_Subjects";
             this.Text = "v";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,14 +166,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSubjectCode;
+        private System.Windows.Forms.TextBox txtSubjectName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbCreditHour;
+        private System.Windows.Forms.CheckBox cbHasPractical;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label4;
     }
 }

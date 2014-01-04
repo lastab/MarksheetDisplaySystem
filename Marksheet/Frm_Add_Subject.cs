@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Marksheet
 {
-    public partial class Add_Subjects : Form
+    public partial class frm_Add_Subjects : Form
     {
-        public Add_Subjects()
+        public frm_Add_Subjects()
         {
             InitializeComponent();
         }

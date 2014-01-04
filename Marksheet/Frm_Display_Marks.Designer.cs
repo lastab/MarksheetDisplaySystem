@@ -28,19 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgvMarks = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblPrecentage = new System.Windows.Forms.Label();
+            this.cbRollNo = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvMarks
+            // 
+            this.dgvMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarks.Location = new System.Drawing.Point(47, 118);
+            this.dgvMarks.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvMarks.Name = "dgvMarks";
+            this.dgvMarks.Size = new System.Drawing.Size(706, 244);
+            this.dgvMarks.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Roll No.:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(42, 369);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(182, 25);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Total Percentage:";
+            // 
+            // lblPrecentage
+            // 
+            this.lblPrecentage.AutoSize = true;
+            this.lblPrecentage.Location = new System.Drawing.Point(226, 368);
+            this.lblPrecentage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblPrecentage.Name = "lblPrecentage";
+            this.lblPrecentage.Size = new System.Drawing.Size(67, 25);
+            this.lblPrecentage.TabIndex = 6;
+            this.lblPrecentage.Text = "100%";
+            // 
+            // cbRollNo
+            // 
+            this.cbRollNo.FormattingEnabled = true;
+            this.cbRollNo.Location = new System.Drawing.Point(145, 22);
+            this.cbRollNo.Name = "cbRollNo";
+            this.cbRollNo.Size = new System.Drawing.Size(188, 33);
+            this.cbRollNo.TabIndex = 7;
             // 
             // Frm_Display_Marks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 388);
+            this.ClientSize = new System.Drawing.Size(818, 431);
+            this.Controls.Add(this.cbRollNo);
+            this.Controls.Add(this.lblPrecentage);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvMarks);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Frm_Display_Marks";
             this.Text = "Frm_Display_Marks";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvMarks;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPrecentage;
+        private System.Windows.Forms.ComboBox cbRollNo;
     }
 }
