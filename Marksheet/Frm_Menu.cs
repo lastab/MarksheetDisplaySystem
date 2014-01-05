@@ -21,6 +21,7 @@ namespace Marksheet
         {            
             Global.frmAddStudent=new Frm_Add_student();
             Global.frmAddStudent.Show();
+    
         }
 
         private void btnAddSubject_Click(object sender, EventArgs e)

@@ -73,7 +73,6 @@
             this.txtTermTest.Name = "txtTermTest";
             this.txtTermTest.Size = new System.Drawing.Size(103, 31);
             this.txtTermTest.TabIndex = 5;
-            this.txtTermTest.Text = "5";
             // 
             // label5
             // 
@@ -92,7 +91,6 @@
             this.txtAssignment.Name = "txtAssignment";
             this.txtAssignment.Size = new System.Drawing.Size(103, 31);
             this.txtAssignment.TabIndex = 4;
-            this.txtAssignment.Text = "4";
             // 
             // label2
             // 
@@ -111,7 +109,6 @@
             this.txtAttendence.Name = "txtAttendence";
             this.txtAttendence.Size = new System.Drawing.Size(103, 31);
             this.txtAttendence.TabIndex = 3;
-            this.txtAttendence.Text = "3";
             // 
             // label1
             // 
@@ -140,6 +137,7 @@
             this.cbRollNo.Location = new System.Drawing.Point(238, 74);
             this.cbRollNo.Name = "cbRollNo";
             this.cbRollNo.Size = new System.Drawing.Size(121, 33);
+            this.cbRollNo.Sorted = true;
             this.cbRollNo.TabIndex = 1;
             // 
             // cbName
@@ -150,6 +148,7 @@
             this.cbName.Location = new System.Drawing.Point(238, 113);
             this.cbName.Name = "cbName";
             this.cbName.Size = new System.Drawing.Size(121, 33);
+            this.cbName.Sorted = true;
             this.cbName.TabIndex = 2;
             // 
             // label4

@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class_studnet_details.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="database.cs" />
     <Compile Include="Frm_Add_Student.cs">
