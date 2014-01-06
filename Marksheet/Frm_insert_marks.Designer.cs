@@ -73,6 +73,7 @@
             this.txtTermTest.Name = "txtTermTest";
             this.txtTermTest.Size = new System.Drawing.Size(103, 31);
             this.txtTermTest.TabIndex = 5;
+            this.txtTermTest.Text = "0";
             // 
             // label5
             // 
@@ -91,6 +92,7 @@
             this.txtAssignment.Name = "txtAssignment";
             this.txtAssignment.Size = new System.Drawing.Size(103, 31);
             this.txtAssignment.TabIndex = 4;
+            this.txtAssignment.Text = "0";
             // 
             // label2
             // 
@@ -109,6 +111,7 @@
             this.txtAttendence.Name = "txtAttendence";
             this.txtAttendence.Size = new System.Drawing.Size(103, 31);
             this.txtAttendence.TabIndex = 3;
+            this.txtAttendence.Text = "0";
             // 
             // label1
             // 
@@ -118,7 +121,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Attendence";
+            this.label1.Text = "Attendance";
             // 
             // label3
             // 
@@ -190,6 +193,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label7
             // 
@@ -222,6 +226,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Frm_insert_marks";
             this.Text = "Frm_insert_marks";
+            this.Load += new System.EventHandler(this.Frm_insert_marks_Load);
             this.gbPractical.ResumeLayout(false);
             this.gbPractical.PerformLayout();
             this.ResumeLayout(false);

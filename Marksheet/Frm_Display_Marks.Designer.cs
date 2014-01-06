@@ -40,7 +40,7 @@
             // 
             this.dgvMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarks.Location = new System.Drawing.Point(47, 118);
-            this.dgvMarks.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvMarks.Margin = new System.Windows.Forms.Padding(6);
             this.dgvMarks.Name = "dgvMarks";
             this.dgvMarks.Size = new System.Drawing.Size(706, 244);
             this.dgvMarks.TabIndex = 0;
@@ -82,6 +82,7 @@
             this.cbRollNo.Name = "cbRollNo";
             this.cbRollNo.Size = new System.Drawing.Size(188, 33);
             this.cbRollNo.TabIndex = 7;
+            this.cbRollNo.SelectedIndexChanged += new System.EventHandler(this.cbRollNo_SelectedIndexChanged);
             // 
             // Frm_Display_Marks
             // 
@@ -94,9 +95,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvMarks);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Frm_Display_Marks";
             this.Text = "Frm_Display_Marks";
+            this.Load += new System.EventHandler(this.Frm_Display_Marks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

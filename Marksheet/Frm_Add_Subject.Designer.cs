@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbCreditHour = new System.Windows.Forms.ComboBox();
-            this.cbHasPractical = new System.Windows.Forms.CheckBox();
+            this.cboHasPractical = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -100,16 +100,16 @@
             this.cbCreditHour.Size = new System.Drawing.Size(48, 39);
             this.cbCreditHour.TabIndex = 6;
             // 
-            // cbHasPractical
+            // cboHasPractical
             // 
-            this.cbHasPractical.AutoSize = true;
-            this.cbHasPractical.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbHasPractical.Location = new System.Drawing.Point(53, 200);
-            this.cbHasPractical.Name = "cbHasPractical";
-            this.cbHasPractical.Size = new System.Drawing.Size(194, 35);
-            this.cbHasPractical.TabIndex = 7;
-            this.cbHasPractical.Text = "Has Practical";
-            this.cbHasPractical.UseVisualStyleBackColor = true;
+            this.cboHasPractical.AutoSize = true;
+            this.cboHasPractical.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboHasPractical.Location = new System.Drawing.Point(53, 200);
+            this.cboHasPractical.Name = "cboHasPractical";
+            this.cboHasPractical.Size = new System.Drawing.Size(194, 35);
+            this.cboHasPractical.TabIndex = 7;
+            this.cboHasPractical.Text = "Has Practical";
+            this.cboHasPractical.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
@@ -120,6 +120,7 @@
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -149,7 +150,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.cbHasPractical);
+            this.Controls.Add(this.cboHasPractical);
             this.Controls.Add(this.cbCreditHour);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSubjectName);
@@ -171,7 +172,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbCreditHour;
-        private System.Windows.Forms.CheckBox cbHasPractical;
+        private System.Windows.Forms.CheckBox cboHasPractical;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label4;
