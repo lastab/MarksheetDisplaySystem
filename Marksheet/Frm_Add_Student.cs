@@ -27,8 +27,10 @@ namespace Marksheet
             studentDetails.DOB = dtpDOB.Value;
             studentDetails.Address = txtAddress.Text;
             studentDetails.Phone = txtPhone.Text;
-            studentDetails.Add_Student_Details();
-            MessageBox.Show("Success!");
+            if (studentDetails.Add_Student_Details() == "inserted")
+                MessageBox.Show("Success!");
+            else
+                MessageBox.Show(studentDetails.Update_Student_Details());
         }
     }
 }

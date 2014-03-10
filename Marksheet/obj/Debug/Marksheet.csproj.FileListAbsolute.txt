@@ -11,3 +11,16 @@ C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debu
 C:\Users\User\Documents\Visual Studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.pdb
 C:\Users\User\documents\visual studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.Frm_Display_Marks.resources
 C:\Users\User\documents\visual studio 2012\Projects\Marksheet\Marksheet\obj\Debug\Marksheet.frm_Add_Subjects.resources
+D:\batsal\git\marksheet\Marksheet\bin\Debug\Marksheet.exe.config
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.exe
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.pdb
+D:\batsal\git\marksheet\Marksheet\bin\Debug\Marksheet.exe
+D:\batsal\git\marksheet\Marksheet\bin\Debug\Marksheet.pdb
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.csprojResolveAssemblyReference.cache
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Add_student.resources
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.frm_Add_Subjects.resources
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Display_Marks.resources
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.Frm_insert_marks.resources
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Menu.resources
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.Properties.Resources.resources
+D:\batsal\git\marksheet\Marksheet\obj\Debug\Marksheet.csproj.GenerateResource.Cache

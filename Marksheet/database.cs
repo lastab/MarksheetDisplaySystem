@@ -50,11 +50,19 @@ namespace Marksheet
         //Procedure to execute add, edit or delte records in table 
         public void DB_Execute(string strsql)
         {
-            Connect_to_database();
-            cmd.CommandText = strsql;
-            cmd.Connection = conn;
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                Connect_to_database();
+                cmd.CommandText = strsql;
+                cmd.Connection = conn;
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (OleDbException ex)
+            {
+                conn.Close();
+                throw ex;
+            }
         }
 
         //Procedure to return string Valuefrom passed sql statement

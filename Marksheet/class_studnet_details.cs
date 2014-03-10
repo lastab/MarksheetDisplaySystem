@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.OleDb;
 
 namespace Marksheet
 {
@@ -99,14 +101,38 @@ namespace Marksheet
         /// <summary>
         /// Procedures
         /// </summary>
-        public void Add_Student_Details()
+        public string Add_Student_Details()
         {
-            string strsql = "insert into Student (Student_Roll,Student_Name,Gender,Dob,Address,Phone) values(" + _Roll + ",'" + _FName + " " + _LName + "'," + _Gender + ",'" + _DOB + "','" + _Address + "','" + _Phone + "')";
-            // 
-            //
-            db.DB_Execute(strsql);
-        }
+            try
+            {
+                string strsql = "insert into Student (Student_Roll,Student_Name,Gender,Dob,Address,Phone) values(" + _Roll + ",'" + _FName + " " + _LName + "'," + _Gender + ",'" + _DOB + "','" + _Address + "','" + _Phone + "')";
 
+
+                db.DB_Execute(strsql);
+                return "inserted";
+            }
+            catch (OleDbException ex)
+            {
+                return "update";
+            }
+        }
+        public string Update_Student_Details()
+        {
+            try
+            {
+                string strsql = "update Student set Student_Name='" + _FName + " " + _LName + "',Gender=" + _Gender + ",Dob='" + _DOB + "',Address='" + _Address + "',Phone='" + _Phone + "' where Student_Roll=" + _Roll + ";";
+                db.DB_Execute(strsql);
+                return "updated";
+            }
+            catch (OleDbException ex)
+            {
+                return "fail";
+
+            }
+
+
+
+        }
 
 
 
