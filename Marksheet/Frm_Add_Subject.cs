@@ -12,7 +12,7 @@ namespace Marksheet
 {
     public partial class frm_Add_Subjects : Form
     {
-        class_subject_details classDetails= new class_subject_details();
+        class_subject_details classSubjectDetails= new class_subject_details();
         public frm_Add_Subjects()
         {
             InitializeComponent();
@@ -20,12 +20,15 @@ namespace Marksheet
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            classDetails.SubjectName = txtSubjectName.Text;
-            classDetails.CredtHour = Convert.ToInt16(cbCreditHour.SelectedItem) ;
-            classDetails.HasPractical = cboHasPractical.Checked;
-            classDetails.Add_Subject_Details();
-            MessageBox.Show("Success");
+            classSubjectDetails.SubjectCode = txtSubjectCode.Text;
+            classSubjectDetails.SubjectName = txtSubjectName.Text;
+            classSubjectDetails.CredtHour = Convert.ToInt16(cbCreditHour.SelectedItem) ;
+            classSubjectDetails.HasPractical = cboHasPractical.Checked;
 
+            if (classSubjectDetails .Add_Subject_Details() == "inserted")
+                MessageBox.Show("Success!");
+            else
+                MessageBox.Show(classSubjectDetails.Update_Subject_Details());
         }
     }
 }

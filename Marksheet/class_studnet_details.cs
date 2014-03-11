@@ -111,7 +111,7 @@ namespace Marksheet
                 db.DB_Execute(strsql);
                 return "inserted";
             }
-            catch (OleDbException ex)
+            catch 
             {
                 return "update";
             }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.OleDb;
+
 
 namespace Marksheet
 {
@@ -64,11 +67,32 @@ namespace Marksheet
         /// <summary>
         /// Procedures
         /// </summary>
-        public void Add_Subject_Details()
+        public string Add_Subject_Details()
         {
-            string strsql = "insert into Subject (Subject_Name,Credit_Hour,Practical) values('" + _SubjectName  + "'," + _CreditHour + "," + _HasPractical + ")";
-            // No subject code hasf been inserted.....
-            db.DB_Execute(strsql);
+            try
+            {
+                string strsql = "insert into Subject (Subject_Code, Subject_Name,Credit_Hour,Practical) values('" + _SubjectCode + "','" + _SubjectName + "'," + _CreditHour + "," + _HasPractical + ")";
+                db.DB_Execute(strsql);
+                return "inserted";
+            }
+            catch
+            {
+                return "update";
+            }
         }
+        public string Update_Subject_Details()
+        {
+            try
+            {
+                string strsql = "update Subject set Subject_Code='" + _SubjectCode +  "',Credit_Hour=" + _CreditHour + ",Practical=" + _HasPractical + " where Subject_Name='" + _SubjectName +"';";
+                db.DB_Execute(strsql);
+                return "updated";
+            }
+            catch (OleDbException ex)
+            {
+                return "fail";
+            }
+        }
+
     }
 }

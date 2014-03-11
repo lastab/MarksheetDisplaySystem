@@ -89,10 +89,31 @@ namespace Marksheet
         /// <summary>
         /// Procedures
         /// </summary>
-        public void Add_Student_Marks()
+        public string Add_Student_Marks()
         {
-            string strsql = "insert into Student_marks (Subject_Name,Student_Roll,attandance,Assignment,Term_Test,Practical) values('" + _SubjectName + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTest + "," + _Practical + ")";
-            db.DB_Execute(strsql);
+            try
+            {
+                string strsql = "insert into Student_marks (Subject_Name,Student_Roll,Attandance,Assignment,Term_Test,Practical) values('" + _SubjectName + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTest + "," + _Practical + ")";
+                db.DB_Execute(strsql);
+                return "inserted";
+            }
+            catch
+            {
+                return "update";
+            }
+        }
+        public string Update_Student_Marks()
+        {
+            try
+            {
+                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test=" + _TermTest + ",Practical=" + _Practical + " where Subject_Name='" + _SubjectName + "' and Student_Roll="+_Roll+";";
+                db.DB_Execute(strsql);
+                return "updated";
+            }
+            catch 
+            {
+                return "fail";
+            }
         }
         public DataTable Get_All_Student_Roll()
         {
@@ -108,6 +129,11 @@ namespace Marksheet
             string strsql = "select Subject_Name from subject";
             dt = db.Get_records(strsql);
             return dt;
+        }
+
+        public string Subject_Has_practical()
+        {
+            return db.DB_GetAValue("select practical from Subject where Subject_Name='" + _SubjectName + "';");
         }
 
     }

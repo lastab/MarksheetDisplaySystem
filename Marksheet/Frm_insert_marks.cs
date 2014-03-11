@@ -21,16 +21,17 @@ namespace Marksheet
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            class_insert_marks classMarks = new class_insert_marks();
-            classMarks.Roll = Convert.ToInt32(cbRollNo.Text);
-            classMarks.SubjectName = cbName.Text;
-            classMarks.Assignment  = Convert.ToInt16(txtAssignment .Text);
-            classMarks.Attendance = Convert.ToInt16(txtAttendence.Text);
-            classMarks.TermTest  = Convert.ToInt16(txtTermTest.Text);
-            classMarks.Practical = Convert.ToInt16 (txtPractical.Text);
-            classMarks.Add_Student_Marks();
-            ////Left to add data to database////
-            MessageBox.Show("success");
+            classInsertMarks.Roll = Convert.ToInt32(cbRollNo.Text);
+            classInsertMarks.SubjectName = cbName.Text;
+            classInsertMarks.Assignment  = Convert.ToInt16(txtAssignment .Text);
+            classInsertMarks.Attendance = Convert.ToInt16(txtAttendence.Text);
+            classInsertMarks.TermTest  = Convert.ToInt16(txtTermTest.Text);
+            classInsertMarks.Practical = Convert.ToInt16 (txtPractical.Text);
+            
+            if (classInsertMarks.Add_Student_Marks () == "inserted")
+                MessageBox.Show("Success!");
+            else
+                MessageBox.Show(classInsertMarks.Update_Student_Marks ());
         }
 
         private void Frm_insert_marks_Load(object sender, EventArgs e)
@@ -46,6 +47,18 @@ namespace Marksheet
             dt = classInsertMarks.Get_All_Subjects();
             cbName.DataSource = dt;
             cbName.DisplayMember = "Subject_Name";
+
+
+
+        }
+
+        private void cbName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            classInsertMarks.SubjectName = cbName.Text;
+            if (classInsertMarks.Subject_Has_practical()=="True")
+                gbPractical.Enabled = true;
+            else
+                gbPractical.Enabled = false;
 
 
 
