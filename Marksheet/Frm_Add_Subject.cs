@@ -22,7 +22,7 @@ namespace Marksheet
         {
             classSubjectDetails.SubjectCode = txtSubjectCode.Text;
             classSubjectDetails.SubjectName = txtSubjectName.Text;
-            classSubjectDetails.CredtHour = Convert.ToInt16(cbCreditHour.SelectedItem) ;
+            classSubjectDetails.CredtHour = Convert.ToInt16(cbCreditHour.Text ) ;
             classSubjectDetails.HasPractical = cboHasPractical.Checked;
 
             if (classSubjectDetails .Add_Subject_Details() == "inserted")

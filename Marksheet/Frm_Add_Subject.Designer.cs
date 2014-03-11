@@ -44,35 +44,39 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 66);
+            this.label1.Location = new System.Drawing.Point(44, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 31);
+            this.label1.Size = new System.Drawing.Size(222, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Subject Code";
             // 
             // txtSubjectCode
             // 
             this.txtSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubjectCode.Location = new System.Drawing.Point(216, 63);
+            this.txtSubjectCode.Location = new System.Drawing.Point(288, 78);
+            this.txtSubjectCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSubjectCode.Name = "txtSubjectCode";
-            this.txtSubjectCode.Size = new System.Drawing.Size(100, 38);
+            this.txtSubjectCode.Size = new System.Drawing.Size(132, 46);
             this.txtSubjectCode.TabIndex = 1;
             // 
             // txtSubjectName
             // 
             this.txtSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubjectName.Location = new System.Drawing.Point(216, 111);
+            this.txtSubjectName.Location = new System.Drawing.Point(288, 137);
+            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSubjectName.Name = "txtSubjectName";
-            this.txtSubjectName.Size = new System.Drawing.Size(100, 38);
+            this.txtSubjectName.Size = new System.Drawing.Size(132, 46);
             this.txtSubjectName.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 114);
+            this.label2.Location = new System.Drawing.Point(44, 140);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 31);
+            this.label2.Size = new System.Drawing.Size(231, 39);
             this.label2.TabIndex = 2;
             this.label2.Text = "Subject Name";
             // 
@@ -80,9 +84,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 155);
+            this.label3.Location = new System.Drawing.Point(44, 191);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 31);
+            this.label3.Size = new System.Drawing.Size(191, 39);
             this.label3.TabIndex = 4;
             this.label3.Text = "Credit Hour";
             // 
@@ -95,18 +100,21 @@
             "2",
             "3",
             "4"});
-            this.cbCreditHour.Location = new System.Drawing.Point(216, 155);
+            this.cbCreditHour.Location = new System.Drawing.Point(288, 191);
+            this.cbCreditHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCreditHour.Name = "cbCreditHour";
-            this.cbCreditHour.Size = new System.Drawing.Size(48, 39);
+            this.cbCreditHour.Size = new System.Drawing.Size(63, 47);
             this.cbCreditHour.TabIndex = 6;
+            this.cbCreditHour.Text = "2";
             // 
             // cboHasPractical
             // 
             this.cboHasPractical.AutoSize = true;
             this.cboHasPractical.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboHasPractical.Location = new System.Drawing.Point(53, 200);
+            this.cboHasPractical.Location = new System.Drawing.Point(71, 246);
+            this.cboHasPractical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboHasPractical.Name = "cboHasPractical";
-            this.cboHasPractical.Size = new System.Drawing.Size(194, 35);
+            this.cboHasPractical.Size = new System.Drawing.Size(240, 43);
             this.cboHasPractical.TabIndex = 7;
             this.cboHasPractical.Text = "Has Practical";
             this.cboHasPractical.UseVisualStyleBackColor = true;
@@ -114,9 +122,10 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(66, 262);
+            this.btnSave.Location = new System.Drawing.Point(88, 322);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(77, 35);
+            this.btnSave.Size = new System.Drawing.Size(103, 43);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -125,9 +134,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(172, 262);
+            this.btnCancel.Location = new System.Drawing.Point(229, 322);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 35);
+            this.btnCancel.Size = new System.Drawing.Size(123, 43);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -136,17 +146,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 9);
+            this.label4.Location = new System.Drawing.Point(63, 11);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(289, 31);
+            this.label4.Size = new System.Drawing.Size(356, 39);
             this.label4.TabIndex = 10;
             this.label4.Text = "Enter Subject Details";
             // 
             // frm_Add_Subjects
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 315);
+            this.ClientSize = new System.Drawing.Size(501, 388);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -157,6 +168,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSubjectCode);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_Add_Subjects";
             this.Text = "v";
             this.ResumeLayout(false);

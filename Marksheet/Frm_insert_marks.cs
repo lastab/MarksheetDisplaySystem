@@ -27,6 +27,7 @@ namespace Marksheet
             classInsertMarks.Attendance = Convert.ToInt16(txtAttendence.Text);
             classInsertMarks.TermTest  = Convert.ToInt16(txtTermTest.Text);
             classInsertMarks.Practical = Convert.ToInt16 (txtPractical.Text);
+            classInsertMarks.Calculate_Total();
             
             if (classInsertMarks.Add_Student_Marks () == "inserted")
                 MessageBox.Show("Success!");

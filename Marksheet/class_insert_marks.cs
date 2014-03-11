@@ -18,6 +18,7 @@ namespace Marksheet
         private int _Assignment;
         private int _TermTest;
         private int _Practical;
+        private int _TotalMarks;
 
         public int Roll
         {
@@ -86,14 +87,39 @@ namespace Marksheet
                 _Practical = value;
             }
         }
+        public int TotalMarks
+        {
+            get
+            {
+                return _TotalMarks;
+            }
+            set
+            {
+                _TotalMarks = value;
+            }
+        }
         /// <summary>
         /// Procedures
         /// </summary>
+        /// 
+        public void Calculate_Total()
+        {
+            if (Subject_Has_practical() == "True")
+            {
+                _TotalMarks = _Assignment + _Attendance + TermTest + _Practical;
+            }
+            else
+            {
+                _TotalMarks = _Assignment + _Attendance + TermTest;
+                _TotalMarks = _TotalMarks / 90 * 100;
+            }
+        }
+
         public string Add_Student_Marks()
         {
             try
             {
-                string strsql = "insert into Student_marks (Subject_Name,Student_Roll,Attandance,Assignment,Term_Test,Practical) values('" + _SubjectName + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTest + "," + _Practical + ")";
+                string strsql = "insert into Student_marks (Subject_Name,Student_Roll,Attandance,Assignment,Term_Test,Practical,Total_Percent) values('" + _SubjectName + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTest + "," + _Practical + "," + _TotalMarks  + ")";
                 db.DB_Execute(strsql);
                 return "inserted";
             }
@@ -106,7 +132,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test=" + _TermTest + ",Practical=" + _Practical + " where Subject_Name='" + _SubjectName + "' and Student_Roll="+_Roll+";";
+                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test=" + _TermTest + ",Practical=" + _Practical + ",Total_Percent=" + _TotalMarks + " where Subject_Name='" + _SubjectName + "' and Student_Roll=" + _Roll + ";";
                 db.DB_Execute(strsql);
                 return "updated";
             }

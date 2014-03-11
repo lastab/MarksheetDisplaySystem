@@ -88,7 +88,7 @@ namespace Marksheet
                 db.DB_Execute(strsql);
                 return "updated";
             }
-            catch (OleDbException ex)
+            catch
             {
                 return "fail";
             }
