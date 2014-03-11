@@ -55,10 +55,15 @@ namespace Marksheet
         private void cbName_SelectedIndexChanged(object sender, EventArgs e)
         {
             classInsertMarks.SubjectName = cbName.Text;
-            if (classInsertMarks.Subject_Has_practical()=="True")
+            if (classInsertMarks.Subject_Has_practical() == "True")
+            {
                 gbPractical.Enabled = true;
+            }
             else
+            {
                 gbPractical.Enabled = false;
+                txtPractical.Text = "0";
+            }
 
 
 

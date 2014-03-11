@@ -42,7 +42,7 @@
             this.dgvMarks.Location = new System.Drawing.Point(47, 118);
             this.dgvMarks.Margin = new System.Windows.Forms.Padding(6);
             this.dgvMarks.Name = "dgvMarks";
-            this.dgvMarks.Size = new System.Drawing.Size(706, 244);
+            this.dgvMarks.Size = new System.Drawing.Size(910, 244);
             this.dgvMarks.TabIndex = 0;
             // 
             // label2
@@ -51,7 +51,7 @@
             this.label2.Location = new System.Drawing.Point(42, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.Size = new System.Drawing.Size(119, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Roll No.:";
             // 
@@ -61,7 +61,7 @@
             this.label3.Location = new System.Drawing.Point(42, 369);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 25);
+            this.label3.Size = new System.Drawing.Size(229, 31);
             this.label3.TabIndex = 5;
             this.label3.Text = "Total Percentage:";
             // 
@@ -71,7 +71,7 @@
             this.lblPrecentage.Location = new System.Drawing.Point(226, 368);
             this.lblPrecentage.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblPrecentage.Name = "lblPrecentage";
-            this.lblPrecentage.Size = new System.Drawing.Size(67, 25);
+            this.lblPrecentage.Size = new System.Drawing.Size(83, 31);
             this.lblPrecentage.TabIndex = 6;
             this.lblPrecentage.Text = "100%";
             // 
@@ -80,15 +80,15 @@
             this.cbRollNo.FormattingEnabled = true;
             this.cbRollNo.Location = new System.Drawing.Point(145, 22);
             this.cbRollNo.Name = "cbRollNo";
-            this.cbRollNo.Size = new System.Drawing.Size(188, 33);
+            this.cbRollNo.Size = new System.Drawing.Size(188, 38);
             this.cbRollNo.TabIndex = 7;
             this.cbRollNo.SelectedIndexChanged += new System.EventHandler(this.cbRollNo_SelectedIndexChanged);
             // 
             // Frm_Display_Marks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 431);
+            this.ClientSize = new System.Drawing.Size(1009, 431);
             this.Controls.Add(this.cbRollNo);
             this.Controls.Add(this.lblPrecentage);
             this.Controls.Add(this.label3);
