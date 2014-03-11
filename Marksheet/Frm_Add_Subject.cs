@@ -12,7 +12,7 @@ namespace Marksheet
 {
     public partial class frm_Add_Subjects : Form
     {
-        class_subject_details classSubjectDetails= new class_subject_details();
+        class_subject_details classSubjectDetails = new class_subject_details();
         public frm_Add_Subjects()
         {
             InitializeComponent();
@@ -20,15 +20,42 @@ namespace Marksheet
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            classSubjectDetails.SubjectCode = txtSubjectCode.Text;
-            classSubjectDetails.SubjectName = txtSubjectName.Text;
-            classSubjectDetails.CredtHour = Convert.ToInt16(cbCreditHour.Text ) ;
-            classSubjectDetails.HasPractical = cboHasPractical.Checked;
 
-            if (classSubjectDetails .Add_Subject_Details() == "inserted")
-                MessageBox.Show("Success!");
+            if (txtSubjectCode.Text == "")
+            {
+                errorProvider1.SetError(txtSubjectCode, "Empty Subject Code");
+            }
+
             else
-                MessageBox.Show(classSubjectDetails.Update_Subject_Details());
+            {
+                errorProvider1.Dispose();
+                if (txtSubjectName.Text == "")
+                {
+                    errorProvider1.SetError(txtSubjectName, "Empty Subject Name");
+                }
+                else
+                {
+                    errorProvider1.Dispose();
+                    if (Convert.ToInt16(cbCreditHour.Text) > 0 && Convert.ToInt16(cbCreditHour.Text) < 5)
+                    {
+                        errorProvider1.Dispose();
+                        classSubjectDetails.SubjectCode = txtSubjectCode.Text;
+                        classSubjectDetails.SubjectName = txtSubjectName.Text;
+                        classSubjectDetails.CredtHour = Convert.ToInt16(cbCreditHour.Text);
+                        classSubjectDetails.HasPractical = cboHasPractical.Checked;
+
+                        if (classSubjectDetails.Add_Subject_Details() == "inserted")
+                            MessageBox.Show("Success!");
+                        else
+                            MessageBox.Show(classSubjectDetails.Update_Subject_Details());
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(cbCreditHour, "not valied");
+                    }
+                }
+
+            }
         }
     }
 }

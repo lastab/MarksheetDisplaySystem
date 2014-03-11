@@ -23,16 +23,45 @@ namespace Marksheet
         {
             classInsertMarks.Roll = Convert.ToInt32(cbRollNo.Text);
             classInsertMarks.SubjectName = cbName.Text;
-            classInsertMarks.Assignment  = Convert.ToInt16(txtAssignment .Text);
-            classInsertMarks.Attendance = Convert.ToInt16(txtAttendence.Text);
-            classInsertMarks.TermTest  = Convert.ToInt16(txtTermTest.Text);
-            classInsertMarks.Practical = Convert.ToInt16 (txtPractical.Text);
-            classInsertMarks.Calculate_Total();
-            
-            if (classInsertMarks.Add_Student_Marks () == "inserted")
-                MessageBox.Show("Success!");
-            else
-                MessageBox.Show(classInsertMarks.Update_Student_Marks ());
+            try
+            {
+                classInsertMarks.Assignment = Convert.ToInt16(txtAssignment.Text);
+                if (classInsertMarks.Assignment > 10)
+                    errorProvider1.SetError(txtAssignment, "value must be between 0-10");
+                else
+                {
+                    errorProvider1.Dispose();
+                    classInsertMarks.Attendance = Convert.ToInt16(txtAttendence.Text);
+                    if (classInsertMarks.Attendance > 10)
+                        errorProvider1.SetError(txtAttendence, "value must be  between 0-10");
+                    else
+                    {
+                        errorProvider1.Dispose();
+                        classInsertMarks.TermTest = Convert.ToInt16(txtTermTest.Text);
+                        if (classInsertMarks.TermTest > 60)
+                            errorProvider1.SetError(txtTermTest, "value must be  between 0-60");
+                        else
+                        {
+                            classInsertMarks.Practical = Convert.ToInt16(txtPractical.Text);
+                            if (classInsertMarks.Practical > 10)
+                                errorProvider1.SetError(txtPractical, "value Must be between 0-10");
+                            else
+                            {
+                                errorProvider1.Dispose();
+                                classInsertMarks.Calculate_Total();
+
+                                if (classInsertMarks.Add_Student_Marks() == "inserted")
+                                    MessageBox.Show("Success!");
+                                else
+                                    MessageBox.Show(classInsertMarks.Update_Student_Marks());
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch
+            { MessageBox.Show("Please enter numeric character"); }
         }
 
         private void Frm_insert_marks_Load(object sender, EventArgs e)

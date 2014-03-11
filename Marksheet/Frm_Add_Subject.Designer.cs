@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSubjectCode = new System.Windows.Forms.TextBox();
             this.txtSubjectName = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +58,7 @@
             // 
             this.txtSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectCode.Location = new System.Drawing.Point(288, 78);
-            this.txtSubjectCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSubjectCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtSubjectCode.Name = "txtSubjectCode";
             this.txtSubjectCode.Size = new System.Drawing.Size(132, 46);
             this.txtSubjectCode.TabIndex = 1;
@@ -64,7 +67,7 @@
             // 
             this.txtSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectName.Location = new System.Drawing.Point(288, 137);
-            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSubjectName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSubjectName.Name = "txtSubjectName";
             this.txtSubjectName.Size = new System.Drawing.Size(132, 46);
             this.txtSubjectName.TabIndex = 3;
@@ -101,7 +104,7 @@
             "3",
             "4"});
             this.cbCreditHour.Location = new System.Drawing.Point(288, 191);
-            this.cbCreditHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCreditHour.Margin = new System.Windows.Forms.Padding(4);
             this.cbCreditHour.Name = "cbCreditHour";
             this.cbCreditHour.Size = new System.Drawing.Size(63, 47);
             this.cbCreditHour.TabIndex = 6;
@@ -112,7 +115,7 @@
             this.cboHasPractical.AutoSize = true;
             this.cboHasPractical.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHasPractical.Location = new System.Drawing.Point(71, 246);
-            this.cboHasPractical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboHasPractical.Margin = new System.Windows.Forms.Padding(4);
             this.cboHasPractical.Name = "cboHasPractical";
             this.cboHasPractical.Size = new System.Drawing.Size(240, 43);
             this.cboHasPractical.TabIndex = 7;
@@ -123,7 +126,7 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(88, 322);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(103, 43);
             this.btnSave.TabIndex = 8;
@@ -135,7 +138,7 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(229, 322);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(123, 43);
             this.btnCancel.TabIndex = 9;
@@ -153,6 +156,10 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Enter Subject Details";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frm_Add_Subjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -168,9 +175,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSubjectCode);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Add_Subjects";
             this.Text = "v";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +196,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

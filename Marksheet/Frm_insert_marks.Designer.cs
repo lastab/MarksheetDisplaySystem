@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtPractical = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTermTest = new System.Windows.Forms.TextBox();
@@ -44,14 +45,16 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbPractical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPractical
             // 
             this.txtPractical.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPractical.Location = new System.Drawing.Point(239, 31);
-            this.txtPractical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPractical.Margin = new System.Windows.Forms.Padding(4);
             this.txtPractical.Name = "txtPractical";
             this.txtPractical.Size = new System.Drawing.Size(136, 37);
             this.txtPractical.TabIndex = 6;
@@ -72,7 +75,7 @@
             // 
             this.txtTermTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTermTest.Location = new System.Drawing.Point(255, 331);
-            this.txtTermTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTermTest.Margin = new System.Windows.Forms.Padding(4);
             this.txtTermTest.Name = "txtTermTest";
             this.txtTermTest.Size = new System.Drawing.Size(136, 37);
             this.txtTermTest.TabIndex = 5;
@@ -92,8 +95,8 @@
             // txtAssignment
             // 
             this.txtAssignment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAssignment.Location = new System.Drawing.Point(255, 277);
-            this.txtAssignment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAssignment.Location = new System.Drawing.Point(255, 213);
+            this.txtAssignment.Margin = new System.Windows.Forms.Padding(4);
             this.txtAssignment.Name = "txtAssignment";
             this.txtAssignment.Size = new System.Drawing.Size(136, 37);
             this.txtAssignment.TabIndex = 4;
@@ -103,7 +106,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 284);
+            this.label2.Location = new System.Drawing.Point(49, 220);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 31);
@@ -113,8 +116,8 @@
             // txtAttendence
             // 
             this.txtAttendence.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAttendence.Location = new System.Drawing.Point(255, 225);
-            this.txtAttendence.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAttendence.Location = new System.Drawing.Point(255, 273);
+            this.txtAttendence.Margin = new System.Windows.Forms.Padding(4);
             this.txtAttendence.Name = "txtAttendence";
             this.txtAttendence.Size = new System.Drawing.Size(136, 37);
             this.txtAttendence.TabIndex = 3;
@@ -124,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 225);
+            this.label1.Location = new System.Drawing.Point(49, 273);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 31);
@@ -147,7 +150,7 @@
             this.cbRollNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRollNo.FormattingEnabled = true;
             this.cbRollNo.Location = new System.Drawing.Point(317, 91);
-            this.cbRollNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbRollNo.Margin = new System.Windows.Forms.Padding(4);
             this.cbRollNo.Name = "cbRollNo";
             this.cbRollNo.Size = new System.Drawing.Size(160, 38);
             this.cbRollNo.Sorted = true;
@@ -159,7 +162,7 @@
             this.cbName.FormattingEnabled = true;
             this.cbName.ItemHeight = 30;
             this.cbName.Location = new System.Drawing.Point(317, 139);
-            this.cbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbName.Margin = new System.Windows.Forms.Padding(4);
             this.cbName.Name = "cbName";
             this.cbName.Size = new System.Drawing.Size(160, 38);
             this.cbName.Sorted = true;
@@ -182,9 +185,9 @@
             this.gbPractical.Controls.Add(this.txtPractical);
             this.gbPractical.Controls.Add(this.label6);
             this.gbPractical.Location = new System.Drawing.Point(16, 384);
-            this.gbPractical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPractical.Margin = new System.Windows.Forms.Padding(4);
             this.gbPractical.Name = "gbPractical";
-            this.gbPractical.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPractical.Padding = new System.Windows.Forms.Padding(4);
             this.gbPractical.Size = new System.Drawing.Size(413, 87);
             this.gbPractical.TabIndex = 6;
             this.gbPractical.TabStop = false;
@@ -193,7 +196,7 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(269, 498);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(123, 43);
             this.btnCancel.TabIndex = 8;
@@ -204,7 +207,7 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(128, 498);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(103, 43);
             this.btnSave.TabIndex = 7;
@@ -222,6 +225,10 @@
             this.label7.Size = new System.Drawing.Size(210, 39);
             this.label7.TabIndex = 40;
             this.label7.Text = "Enter Marks";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Frm_insert_marks
             // 
@@ -242,12 +249,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAttendence);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_insert_marks";
             this.Text = "Frm_insert_marks";
             this.Load += new System.EventHandler(this.Frm_insert_marks_Load);
             this.gbPractical.ResumeLayout(false);
             this.gbPractical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +279,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
