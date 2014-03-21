@@ -45,6 +45,12 @@ namespace Marksheet
                             MessageBox.Show("Success!");
                         else
                             MessageBox.Show(studentDetails.Update_Student_Details());
+
+                        txtAddress.Text = "";
+                        txtFirstName .Text = "";
+                        txtLastName.Text = "";
+                        txtPhone.Text = "";
+                        txtRoll.Text = "";
                     }
                 }
                 

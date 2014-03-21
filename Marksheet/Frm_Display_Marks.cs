@@ -15,6 +15,7 @@ namespace Marksheet
     public partial class Frm_Display_Marks : Form
     {
         class_view_marks  classViewMarks = new class_view_marks ();
+        class_studnet_details classStudentDetails = new class_studnet_details();
         database db = new database();
         public Frm_Display_Marks()
         {
@@ -26,9 +27,21 @@ namespace Marksheet
             DataTable dt = new DataTable();
             if (cbRollNo.Text != "System.Data.DataRowView")
             {
+                classStudentDetails.Roll = Convert.ToInt32(cbRollNo.Text);
                 classViewMarks.Roll = Convert.ToInt32(cbRollNo.Text);
                 dt = classViewMarks.Get_Student_Marks();
                 dgvMarks.DataSource = dt;
+
+                classStudentDetails.Get_Student_Details();
+                lblName.Text = classStudentDetails.FName;
+                if (classStudentDetails.Gender == false )
+                    lblGender.Text = "Male";
+                else
+                    lblGender.Text = "Female";
+                lblPhone.Text = classStudentDetails.Phone;
+                lblAddress.Text = classStudentDetails.Address;
+                
+
             }
 
         }

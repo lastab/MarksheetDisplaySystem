@@ -48,6 +48,9 @@ namespace Marksheet
                             MessageBox.Show("Success!");
                         else
                             MessageBox.Show(classSubjectDetails.Update_Subject_Details());
+
+                        txtSubjectCode.Text = "";
+                        txtSubjectName.Text = "";
                     }
                     else
                     {

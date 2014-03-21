@@ -45,9 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="class_insert_marks.cs" />
+    <Compile Include="class_login.cs" />
     <Compile Include="class_studnet_details.cs" />
     <Compile Include="class_subject_details.cs" />
     <Compile Include="class_view_marks.cs" />
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="database.cs" />
     <Compile Include="Frm_Add_Student.cs">
@@ -68,11 +75,11 @@
     <Compile Include="Frm_Display_Marks.Designer.cs">
       <DependentUpon>Frm_Display_Marks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_insert_marks.cs">
+    <Compile Include="Frm_Insert_marks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_insert_marks.Designer.cs">
-      <DependentUpon>Frm_insert_marks.cs</DependentUpon>
+    <Compile Include="Frm_Insert_marks.Designer.cs">
+      <DependentUpon>Frm_Insert_marks.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
@@ -82,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Add_Student.resx">
       <DependentUpon>Frm_Add_Student.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,8 +101,8 @@
     <EmbeddedResource Include="Frm_Display_Marks.resx">
       <DependentUpon>Frm_Display_Marks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_insert_marks.resx">
-      <DependentUpon>Frm_insert_marks.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Insert_marks.resx">
+      <DependentUpon>Frm_Insert_marks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>

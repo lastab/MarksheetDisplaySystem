@@ -134,6 +134,24 @@ namespace Marksheet
 
         }
 
+        //To generate student's details
+        public void  Get_Student_Details()
+        {
+            string strsql = "select Student_Name from student where Student_Roll=" + _Roll;
+            _FName  = db.DB_GetAValue (strsql);
+            strsql = "select gender from student where Student_Roll=" + _Roll;
+            if (db.DB_GetAValue(strsql) == "true")
+                _Gender = true;
+            else
+                _Gender = false;
+            strsql = "select Phone from student where Student_Roll=" + _Roll;
+            _Phone = db.DB_GetAValue(strsql);
+
+            strsql = "select Address from student where Student_Roll=" + _Roll;
+            _Address  = db.DB_GetAValue(strsql);
+        }
+
+
 
 
     }

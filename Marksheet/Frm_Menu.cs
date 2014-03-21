@@ -34,7 +34,7 @@ namespace Marksheet
 
         private void btnEnterMarks_Click(object sender, EventArgs e)
         {
-            Global.frmInesrtMarks = new Frm_insert_marks();
+            Global.frmInesrtMarks = new Frm_Insert_marks();
             Global.frmInesrtMarks.Show();
         }
 
@@ -43,6 +43,30 @@ namespace Marksheet
             Global.frmDisplayMarks = new Frm_Display_Marks();
             Global.frmDisplayMarks.Show();
   
+        }
+
+        private void Frm_Menu_Load(object sender, EventArgs e)
+        {
+           
+            switch (Global.userType)
+            {
+
+                case 1:
+
+                    btnAddStudent.Enabled = false;
+                    btnAddSubject.Enabled = false;
+                    break;
+                case 0:
+
+                    btnEnterMarks.Enabled = false;
+                    btnAddStudent.Enabled = false;
+                    btnAddSubject.Enabled = false;
+                    break;
+
+
+            } 
+           
+
         }
 
  

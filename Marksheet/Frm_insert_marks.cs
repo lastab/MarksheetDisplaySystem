@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Marksheet
 {
-    public partial class Frm_insert_marks : Form
+    public partial class Frm_Insert_marks : Form
     {
         database db = new database();
         class_insert_marks classInsertMarks = new class_insert_marks();
-        public Frm_insert_marks()
+        public Frm_Insert_marks()
         {
             InitializeComponent();
         }
@@ -38,8 +38,8 @@ namespace Marksheet
                     {
                         errorProvider1.Dispose();
                         classInsertMarks.TermTest = Convert.ToInt16(txtTermTest.Text);
-                        if (classInsertMarks.TermTest > 60)
-                            errorProvider1.SetError(txtTermTest, "value must be  between 0-60");
+                        if (classInsertMarks.TermTest > 70)
+                            errorProvider1.SetError(txtTermTest, "value must be  between 0-70");
                         else
                         {
                             classInsertMarks.Practical = Convert.ToInt16(txtPractical.Text);
@@ -54,6 +54,11 @@ namespace Marksheet
                                     MessageBox.Show("Success!");
                                 else
                                     MessageBox.Show(classInsertMarks.Update_Student_Marks());
+
+                                txtAssignment.Text  = "0";
+                                txtAttendence .Text = "0";
+                                txtPractical.Text = "0";
+                                txtTermTest.Text = "0";
                             }
 
                         }
