@@ -13,7 +13,7 @@ namespace Marksheet
     public partial class Frm_Insert_marks : Form
     {
         database db = new database();
-        class_insert_marks classInsertMarks = new class_insert_marks();
+        class_insert_marks InsertMarks = new class_insert_marks();
         public Frm_Insert_marks()
         {
             InitializeComponent();
@@ -21,39 +21,40 @@ namespace Marksheet
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            classInsertMarks.Roll = Convert.ToInt32(cbRollNo.Text);
-            classInsertMarks.SubjectName = cbName.Text;
+            InsertMarks.Roll = Convert.ToInt32(cbRollNo.Text);
+            InsertMarks.SubjectName = cbName.Text;
             try
             {
-                classInsertMarks.Assignment = Convert.ToInt16(txtAssignment.Text);
-                if (classInsertMarks.Assignment > 10)
+                InsertMarks.Assignment = Convert.ToInt16(txtAssignment.Text);
+                if (InsertMarks.Assignment > 10)
                     errorProvider1.SetError(txtAssignment, "value must be between 0-10");
                 else
                 {
                     errorProvider1.Dispose();
-                    classInsertMarks.Attendance = Convert.ToInt16(txtAttendence.Text);
-                    if (classInsertMarks.Attendance > 10)
+                    InsertMarks.Attendance = Convert.ToInt16(txtAttendence.Text);
+                    if (InsertMarks.Attendance > 10)
                         errorProvider1.SetError(txtAttendence, "value must be  between 0-10");
                     else
                     {
                         errorProvider1.Dispose();
-                        classInsertMarks.TermTest = Convert.ToInt16(txtTermTest.Text);
-                        if (classInsertMarks.TermTest > 70)
+                        InsertMarks.TermTest = Convert.ToInt16(txtTermTest.Text);
+                        if (InsertMarks.TermTest > 70)
                             errorProvider1.SetError(txtTermTest, "value must be  between 0-70");
                         else
                         {
-                            classInsertMarks.Practical = Convert.ToInt16(txtPractical.Text);
-                            if (classInsertMarks.Practical > 10)
+                            InsertMarks.Practical = Convert.ToInt16(txtPractical.Text);
+                            if (InsertMarks.Practical > 10)
                                 errorProvider1.SetError(txtPractical, "value Must be between 0-10");
                             else
                             {
                                 errorProvider1.Dispose();
-                                classInsertMarks.Calculate_Total();
+                                InsertMarks.Calculate_Total();
 
-                                if (classInsertMarks.Add_Student_Marks() == "inserted")
+                                if (InsertMarks.Add_Student_Marks() == "inserted")
                                     MessageBox.Show("Success!");
                                 else
-                                    MessageBox.Show(classInsertMarks.Update_Student_Marks());
+                                    if (MessageBox.Show("The marks of roll:'" + InsertMarks.Roll+ "' and subject:'"+InsertMarks.SubjectName +"' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                    MessageBox.Show(InsertMarks.Update_Student_Marks());
 
                                 txtAssignment.Text  = "0";
                                 txtAttendence .Text = "0";
@@ -74,12 +75,12 @@ namespace Marksheet
             
             
             DataTable dt = new DataTable();
-            dt = classInsertMarks.Get_All_Student_Roll();
+            dt = InsertMarks.Get_All_Student_Roll();
             cbRollNo.DataSource=dt;
             cbRollNo.DisplayMember = "Student_Roll";
             
 
-            dt = classInsertMarks.Get_All_Subjects();
+            dt = InsertMarks.Get_All_Subjects();
             cbName.DataSource = dt;
             cbName.DisplayMember = "Subject_Name";
 
@@ -89,8 +90,8 @@ namespace Marksheet
 
         private void cbName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            classInsertMarks.SubjectName = cbName.Text;
-            if (classInsertMarks.Subject_Has_practical() == "True")
+            InsertMarks.SubjectName = cbName.Text;
+            if (InsertMarks.Subject_Has_practical() == "True")
             {
                 gbPractical.Enabled = true;
             }

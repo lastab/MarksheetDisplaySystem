@@ -101,6 +101,7 @@
             this.Controls.Add(this.btnAddStudent);
             this.Name = "Frm_Menu";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Menu_FormClosing);
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

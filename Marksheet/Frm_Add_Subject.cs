@@ -12,7 +12,7 @@ namespace Marksheet
 {
     public partial class frm_Add_Subjects : Form
     {
-        class_subject_details classSubjectDetails = new class_subject_details();
+        class_subject_details SubjectDetails = new class_subject_details();
         public frm_Add_Subjects()
         {
             InitializeComponent();
@@ -39,15 +39,16 @@ namespace Marksheet
                     if (Convert.ToInt16(cbCreditHour.Text) > 0 && Convert.ToInt16(cbCreditHour.Text) < 5)
                     {
                         errorProvider1.Dispose();
-                        classSubjectDetails.SubjectCode = txtSubjectCode.Text;
-                        classSubjectDetails.SubjectName = txtSubjectName.Text;
-                        classSubjectDetails.CredtHour = Convert.ToInt16(cbCreditHour.Text);
-                        classSubjectDetails.HasPractical = cboHasPractical.Checked;
+                        SubjectDetails.SubjectCode = txtSubjectCode.Text;
+                        SubjectDetails.SubjectName = txtSubjectName.Text;
+                        SubjectDetails.CredtHour = Convert.ToInt16(cbCreditHour.Text);
+                        SubjectDetails.HasPractical = cboHasPractical.Checked;
 
-                        if (classSubjectDetails.Add_Subject_Details() == "inserted")
+                        if (SubjectDetails.Add_Subject_Details() == "inserted")
                             MessageBox.Show("Success!");
                         else
-                            MessageBox.Show(classSubjectDetails.Update_Subject_Details());
+                            if (MessageBox.Show("The data of '" + SubjectDetails.SubjectName   + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            MessageBox.Show(SubjectDetails.Update_Subject_Details());
 
                         txtSubjectCode.Text = "";
                         txtSubjectName.Text = "";

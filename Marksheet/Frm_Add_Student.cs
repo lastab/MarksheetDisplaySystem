@@ -44,7 +44,9 @@ namespace Marksheet
                         if (studentDetails.Add_Student_Details() == "inserted")
                             MessageBox.Show("Success!");
                         else
+                           if ( MessageBox.Show("The data of roll:'"+studentDetails.Roll +"' already exists\n"+"Do you want to update the information? ","The Data already exists.",MessageBoxButtons.YesNo)==DialogResult.Yes)
                             MessageBox.Show(studentDetails.Update_Student_Details());
+
 
                         txtAddress.Text = "";
                         txtFirstName .Text = "";

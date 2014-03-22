@@ -69,6 +69,12 @@ namespace Marksheet
 
         }
 
+        private void Frm_Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+            
+        }
+
  
     }
 }

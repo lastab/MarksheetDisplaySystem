@@ -34,7 +34,7 @@ namespace Marksheet
         public DataTable Get_Student_Marks()
         {
             DataTable dt = new DataTable();
-            string strsql = "select * from student_marks where student_roll=" + _roll;
+            string strsql = "select subject_code, subject_name, credit_hour,attandance,assignment,term_test,practical,total_percent from view_marks where student_roll=" + _roll;
             dt = db.Get_records(strsql);
             return dt;
         
