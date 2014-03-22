@@ -71,7 +71,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "insert into Subject (Subject_Code, Subject_Name,Credit_Hour,Practical) values('" + _SubjectCode + "','" + _SubjectName + "'," + _CreditHour + "," + _HasPractical + ")";
+                string strsql = "insert into Subject (Subject_Code, Subject_Name,Credit_Hour,has_Practical) values('" + _SubjectCode + "','" + _SubjectName + "'," + _CreditHour + "," + _HasPractical + ")";
                 db.DB_Execute(strsql);
                 return "inserted";
             }
@@ -84,7 +84,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "update Subject set Subject_Code='" + _SubjectCode +  "',Credit_Hour=" + _CreditHour + ",Practical=" + _HasPractical + " where Subject_Name='" + _SubjectName +"';";
+                string strsql = "update Subject set Subject_Code='" + _SubjectCode +  "',Credit_Hour=" + _CreditHour + ",has_Practical=" + _HasPractical + " where Subject_Name='" + _SubjectName +"';";
                 db.DB_Execute(strsql);
                 return "updated";
             }

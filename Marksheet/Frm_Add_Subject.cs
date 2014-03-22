@@ -47,7 +47,7 @@ namespace Marksheet
                         if (SubjectDetails.Add_Subject_Details() == "inserted")
                             MessageBox.Show("Success!");
                         else
-                            if (MessageBox.Show("The data of '" + SubjectDetails.SubjectName   + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            if (MessageBox.Show("The data of '" + SubjectDetails.SubjectCode    + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
                             MessageBox.Show(SubjectDetails.Update_Subject_Details());
 
                         txtSubjectCode.Text = "";

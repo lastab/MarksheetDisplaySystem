@@ -22,7 +22,8 @@ namespace Marksheet
         private void btnSave_Click(object sender, EventArgs e)
         {
             InsertMarks.Roll = Convert.ToInt32(cbRollNo.Text);
-            InsertMarks.SubjectName = cbName.Text;
+            InsertMarks.SubjectName = cbName.SelectedValue.ToString();
+            
             try
             {
                 InsertMarks.Assignment = Convert.ToInt16(txtAssignment.Text);
@@ -86,29 +87,33 @@ namespace Marksheet
             dt = InsertMarks.Get_All_Student_Roll();
             cbRollNo.DataSource = dt;
             cbRollNo.DisplayMember = "Student_Roll";
+            
 
 
             dt = InsertMarks.Get_All_Subjects();
             cbName.DataSource = dt;
+            cbName.ValueMember = "Subject_Code";
             cbName.DisplayMember = "Subject_Name";
-
-
+            
+           
 
         }
 
         private void cbName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            InsertMarks.SubjectName = cbName.Text;
-            if (InsertMarks.Subject_Has_practical() == "True")
+            InsertMarks.SubjectCode = cbName.SelectedValue.ToString();
+            if (InsertMarks.SubjectCode != "System.Data.DataRowView")
             {
-                gbPractical.Enabled = true;
+                if (InsertMarks.Subject_Has_practical() == "True")
+                {
+                    gbPractical.Enabled = true;
+                }
+                else
+                {
+                    gbPractical.Enabled = false;
+                    txtPractical.Text = "0";
+                }
             }
-            else
-            {
-                gbPractical.Enabled = false;
-                txtPractical.Text = "0";
-            }
-
 
 
         }

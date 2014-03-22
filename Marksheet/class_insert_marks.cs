@@ -14,6 +14,7 @@ namespace Marksheet
         database db = new database();
         private int _Roll;
         private string _SubjectName;
+        private string _SubjectCode;
         private int _Attendance;
         private int _Assignment;
         private int _TermTestI;
@@ -42,6 +43,17 @@ namespace Marksheet
             set
             {
                 _SubjectName = value;
+            }
+        }
+        public string SubjectCode
+        {
+            get
+            {
+                return _SubjectCode;
+            }
+            set
+            {
+                _SubjectCode = value;
             }
         }
         public int Attendance
@@ -126,7 +138,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "insert into Student_marks (Subject_Name,Student_Roll,Attandance,Assignment,Term_Test_i,Term_Test_ii,Practical,Total_Percent) values('" + _SubjectName + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTestI + "," + _TermTestII + "," + _Practical + "," + _TotalMarks + ")";
+                string strsql = "insert into Student_marks (Subject_Code,Student_Roll,Attandance,Assignment,Term_Test_i,Term_Test_ii,Practical,Total_Percent) values('" + _SubjectCode + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTestI + "," + _TermTestII + "," + _Practical + "," + _TotalMarks + ")";
                 db.DB_Execute(strsql);
                 return "inserted";
             }
@@ -139,7 +151,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test_i=" + _TermTestI + ",Term_Test_ii=" + _TermTestII + ",Practical=" + _Practical + ",Total_Percent=" + _TotalMarks + " where Subject_Name='" + _SubjectName + "' and Student_Roll=" + _Roll + ";";
+                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test_i=" + _TermTestI + ",Term_Test_ii=" + _TermTestII + ",Practical=" + _Practical + ",Total_Percent=" + _TotalMarks + " where Subject_Code='" + _SubjectCode+ "' and Student_Roll=" + _Roll + ";";
                 db.DB_Execute(strsql);
                 return "updated";
             }
@@ -159,14 +171,14 @@ namespace Marksheet
         public DataTable Get_All_Subjects()
         {
             DataTable dt = new DataTable();
-            string strsql = "select Subject_Name from subject";
+            string strsql = "select Subject_Name,subject_code from subject Order by Subject_Name";
             dt = db.Get_records(strsql);
             return dt;
         }
 
         public string Subject_Has_practical()
         {
-            return db.DB_GetAValue("select practical from Subject where Subject_Name='" + _SubjectName + "';");
+            return db.DB_GetAValue("select has_practical from Subject where Subject_Code='" + _SubjectCode  + "';");
         }
 
     }
