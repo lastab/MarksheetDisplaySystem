@@ -16,7 +16,8 @@ namespace Marksheet
         private string _SubjectName;
         private int _Attendance;
         private int _Assignment;
-        private int _TermTest;
+        private int _TermTestI;
+        private int _TermTestII;
         private int _Practical;
         private int _TotalMarks;
 
@@ -65,17 +66,29 @@ namespace Marksheet
                 _Assignment  = value;
             }
         }
-        public int TermTest
+        public int TermTestI
         {
             get
             {
-                return _TermTest;
+                return _TermTestI;
             }
             set
             {
-                _TermTest = value;
+                _TermTestI = value;
             }
         }
+        public int TermTestII
+        {
+            get
+            {
+                return _TermTestII;
+            }
+            set
+            {
+                _TermTestII = value;
+            }
+        }
+
         public int Practical
         {
             get
@@ -104,22 +117,16 @@ namespace Marksheet
         /// 
         public void Calculate_Total()
         {
-            if (Subject_Has_practical() == "True")
-            {
-                _TotalMarks = _Assignment + _Attendance + TermTest + _Practical;
-            }
-            else
-            {
-                _TotalMarks = _Assignment + _Attendance + TermTest;
-                _TotalMarks = _TotalMarks / 90 * 100;
-            }
+          
+                _TotalMarks = _Assignment + _Attendance + TermTestI +TermTestII ;
+          
         }
 
         public string Add_Student_Marks()
         {
             try
             {
-                string strsql = "insert into Student_marks (Subject_Name,Student_Roll,Attandance,Assignment,Term_Test,Practical,Total_Percent) values('" + _SubjectName + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTest + "," + _Practical + "," + _TotalMarks  + ")";
+                string strsql = "insert into Student_marks (Subject_Name,Student_Roll,Attandance,Assignment,Term_Test_i,Term_Test_ii,Practical,Total_Percent) values('" + _SubjectName + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTestI + "," + _TermTestII + "," + _Practical + "," + _TotalMarks + ")";
                 db.DB_Execute(strsql);
                 return "inserted";
             }
@@ -132,7 +139,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test=" + _TermTest + ",Practical=" + _Practical + ",Total_Percent=" + _TotalMarks + " where Subject_Name='" + _SubjectName + "' and Student_Roll=" + _Roll + ";";
+                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test_i=" + _TermTestI + ",Term_Test_ii=" + _TermTestII + ",Practical=" + _Practical + ",Total_Percent=" + _TotalMarks + " where Subject_Name='" + _SubjectName + "' and Student_Roll=" + _Roll + ";";
                 db.DB_Execute(strsql);
                 return "updated";
             }

@@ -37,31 +37,39 @@ namespace Marksheet
                     else
                     {
                         errorProvider1.Dispose();
-                        InsertMarks.TermTest = Convert.ToInt16(txtTermTest.Text);
-                        if (InsertMarks.TermTest > 70)
-                            errorProvider1.SetError(txtTermTest, "value must be  between 0-70");
+                        InsertMarks.TermTestI = Convert.ToInt16(txtTermTestI.Text);
+                        if (InsertMarks.TermTestI > 30)
+                            errorProvider1.SetError(txtTermTestI, "value must be  between 0-30");
                         else
                         {
-                            InsertMarks.Practical = Convert.ToInt16(txtPractical.Text);
-                            if (InsertMarks.Practical > 10)
-                                errorProvider1.SetError(txtPractical, "value Must be between 0-10");
+                            errorProvider1.Dispose();
+                            InsertMarks.TermTestII = Convert.ToInt16(txtTermTestII.Text);
+                            if (InsertMarks.TermTestII > 50)
+                                errorProvider1.SetError(txtTermTestII, "value must be  between 0-50");
                             else
                             {
                                 errorProvider1.Dispose();
-                                InsertMarks.Calculate_Total();
-
-                                if (InsertMarks.Add_Student_Marks() == "inserted")
-                                    MessageBox.Show("Success!");
+                                InsertMarks.Practical = Convert.ToInt16(txtPractical.Text);
+                                if (InsertMarks.Practical > 10)
+                                    errorProvider1.SetError(txtPractical, "value Must be between 0-10");
                                 else
-                                    if (MessageBox.Show("The marks of roll:'" + InsertMarks.Roll+ "' and subject:'"+InsertMarks.SubjectName +"' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                                    MessageBox.Show(InsertMarks.Update_Student_Marks());
+                                {
+                                    errorProvider1.Dispose();
+                                    InsertMarks.Calculate_Total();
 
-                                txtAssignment.Text  = "0";
-                                txtAttendence .Text = "0";
-                                txtPractical.Text = "0";
-                                txtTermTest.Text = "0";
+                                    if (InsertMarks.Add_Student_Marks() == "inserted")
+                                        MessageBox.Show("Success!");
+                                    else
+                                        if (MessageBox.Show("The marks of roll:'" + InsertMarks.Roll + "' and subject:'" + InsertMarks.SubjectName + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                            MessageBox.Show(InsertMarks.Update_Student_Marks());
+
+                                    txtAssignment.Text = "0";
+                                    txtAttendence.Text = "0";
+                                    txtPractical.Text = "0";
+                                    txtTermTestI.Text = "0";
+                                }
+
                             }
-
                         }
                     }
                 }
@@ -72,13 +80,13 @@ namespace Marksheet
 
         private void Frm_insert_marks_Load(object sender, EventArgs e)
         {
-            
-            
+
+
             DataTable dt = new DataTable();
             dt = InsertMarks.Get_All_Student_Roll();
-            cbRollNo.DataSource=dt;
+            cbRollNo.DataSource = dt;
             cbRollNo.DisplayMember = "Student_Roll";
-            
+
 
             dt = InsertMarks.Get_All_Subjects();
             cbName.DataSource = dt;
@@ -105,8 +113,8 @@ namespace Marksheet
 
         }
 
-      
 
-    
+
+
     }
 }
