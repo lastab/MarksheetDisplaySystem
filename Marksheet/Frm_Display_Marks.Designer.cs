@@ -39,10 +39,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbStudentPhoto = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStudentPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMarks
@@ -156,14 +156,14 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Address:";
             // 
-            // pictureBox1
+            // pbStudentPhoto
             // 
-            this.pictureBox1.Image = global::Marksheet.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(900, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 103);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.pbStudentPhoto.Image = global::Marksheet.Properties.Resources.logo;
+            this.pbStudentPhoto.Location = new System.Drawing.Point(900, 9);
+            this.pbStudentPhoto.Name = "pbStudentPhoto";
+            this.pbStudentPhoto.Size = new System.Drawing.Size(172, 103);
+            this.pbStudentPhoto.TabIndex = 16;
+            this.pbStudentPhoto.TabStop = false;
             // 
             // label3
             // 
@@ -181,7 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 345);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbStudentPhoto);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblPhone);
@@ -199,7 +199,7 @@
             this.Text = "Marksheet: Student\'s Marks";
             this.Load += new System.EventHandler(this.Frm_Display_Marks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStudentPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,7 +218,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbStudentPhoto;
         private System.Windows.Forms.Label label3;
     }
 }

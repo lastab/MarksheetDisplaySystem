@@ -17,7 +17,7 @@ namespace Marksheet
         //Procedure to connect the databas
         private void Connect_to_database()
         {
-            conn.ConnectionString = @"provider=Microsoft.Jet.OLEDB.4.0;Data Source= d:\marksheet.mdb; Jet OLEDB:Database Password=cosmos";
+            conn.ConnectionString = @"provider=Microsoft.Jet.OLEDB.4.0;Data Source= marksheet.mdb; Jet OLEDB:Database Password=cosmos";
             conn.Open();
         }
 
