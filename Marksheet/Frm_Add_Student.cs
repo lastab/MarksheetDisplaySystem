@@ -37,7 +37,10 @@ namespace Marksheet
                         studentDetails.LName = txtLastName.Text;
                         errorProvider1.Dispose();
 
-                        studentDetails.Gender = rdbMale.Checked;
+                        if (rdbMale.Checked == true)
+                            studentDetails.Gender = "Male";
+                        else
+                            studentDetails.Gender = "Female";
                         studentDetails.DOB = dtpDOB.Value;
                         studentDetails.Address = txtAddress.Text;
                         studentDetails.Phone = txtPhone.Text;

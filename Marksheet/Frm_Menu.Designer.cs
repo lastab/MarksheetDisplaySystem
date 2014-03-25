@@ -33,12 +33,14 @@
             this.btnEnterMarks = new System.Windows.Forms.Button();
             this.btnSeeMarks = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddStudent
             // 
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddStudent.Location = new System.Drawing.Point(71, 88);
+            this.btnAddStudent.Location = new System.Drawing.Point(71, 157);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(132, 53);
             this.btnAddStudent.TabIndex = 0;
@@ -49,7 +51,7 @@
             // btnAddSubject
             // 
             this.btnAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSubject.Location = new System.Drawing.Point(71, 147);
+            this.btnAddSubject.Location = new System.Drawing.Point(71, 216);
             this.btnAddSubject.Name = "btnAddSubject";
             this.btnAddSubject.Size = new System.Drawing.Size(132, 55);
             this.btnAddSubject.TabIndex = 1;
@@ -60,7 +62,7 @@
             // btnEnterMarks
             // 
             this.btnEnterMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnterMarks.Location = new System.Drawing.Point(71, 208);
+            this.btnEnterMarks.Location = new System.Drawing.Point(71, 277);
             this.btnEnterMarks.Name = "btnEnterMarks";
             this.btnEnterMarks.Size = new System.Drawing.Size(132, 48);
             this.btnEnterMarks.TabIndex = 2;
@@ -71,7 +73,7 @@
             // btnSeeMarks
             // 
             this.btnSeeMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeeMarks.Location = new System.Drawing.Point(71, 262);
+            this.btnSeeMarks.Location = new System.Drawing.Point(71, 331);
             this.btnSeeMarks.Name = "btnSeeMarks";
             this.btnSeeMarks.Size = new System.Drawing.Size(132, 53);
             this.btnSeeMarks.TabIndex = 3;
@@ -83,17 +85,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 43);
+            this.label1.Location = new System.Drawing.Point(93, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "MENU";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Marksheet.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(62, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(141, 97);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 345);
+            this.ClientSize = new System.Drawing.Size(310, 442);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSeeMarks);
             this.Controls.Add(this.btnEnterMarks);
@@ -103,6 +115,7 @@
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Menu_FormClosing);
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +128,7 @@
         private System.Windows.Forms.Button btnEnterMarks;
         private System.Windows.Forms.Button btnSeeMarks;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

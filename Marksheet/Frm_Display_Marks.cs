@@ -14,7 +14,7 @@ namespace Marksheet
 {
     public partial class Frm_Display_Marks : Form
     {
-        class_view_marks  classViewMarks = new class_view_marks ();
+        class_view_marks classViewMarks = new class_view_marks();
         class_studnet_details classStudentDetails = new class_studnet_details();
         database db = new database();
         public Frm_Display_Marks()
@@ -34,13 +34,10 @@ namespace Marksheet
 
                 classStudentDetails.Get_Student_Details();
                 lblName.Text = classStudentDetails.FName;
-                if (classStudentDetails.Gender == false )
-                    lblGender.Text = "Male";
-                else
-                    lblGender.Text = "Female";
+                lblGender.Text = classStudentDetails.Gender;
                 lblPhone.Text = classStudentDetails.Phone;
                 lblAddress.Text = classStudentDetails.Address;
-                
+
 
             }
 
@@ -48,8 +45,8 @@ namespace Marksheet
 
         private void Frm_Display_Marks_Load(object sender, EventArgs e)
         {
-            DataTable dt=new DataTable();
-            dt = classViewMarks .Get_Student_Roll_With_Marks ();
+            DataTable dt = new DataTable();
+            dt = classViewMarks.Get_Student_Roll_With_Marks();
             cbRollNo.DataSource = dt;
             cbRollNo.DisplayMember = "Student_Roll";
         }

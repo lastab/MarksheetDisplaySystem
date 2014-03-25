@@ -14,7 +14,7 @@ namespace Marksheet
         private int _Roll;
         private string _FName;
         private string _LName;
-        private Boolean _Gender;
+        private string  _Gender;
         private DateTime _DOB;
         private string _Address;
         private string _Phone;
@@ -53,7 +53,7 @@ namespace Marksheet
                 _LName = value;
             }
         }
-        public Boolean Gender
+        public string  Gender
         {
             get
             {
@@ -105,7 +105,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "insert into Student (Student_Roll,Student_Name,Gender,Dob,Address,Phone) values(" + _Roll + ",'" + _FName + " " + _LName + "'," + _Gender + ",'" + _DOB + "','" + _Address + "','" + _Phone + "')";
+                string strsql = "insert into Student (Student_Roll,Student_Name,Gender,Dob,Address,Phone) values(" + _Roll + ",'" + _FName + " " + _LName + "','" + _Gender + "','" + _DOB + "','" + _Address + "','" + _Phone + "')";
 
 
                 db.DB_Execute(strsql);
@@ -120,7 +120,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "update Student set Student_Name='" + _FName + " " + _LName + "',Gender=" + _Gender + ",Dob='" + _DOB + "',Address='" + _Address + "',Phone='" + _Phone + "' where Student_Roll=" + _Roll + ";";
+                string strsql = "update Student set Student_Name='" + _FName + " " + _LName + "',Gender='" + _Gender + "',Dob='" + _DOB + "',Address='" + _Address + "',Phone='" + _Phone + "' where Student_Roll=" + _Roll + ";";
                 db.DB_Execute(strsql);
                 return "updated";
             }
@@ -140,10 +140,9 @@ namespace Marksheet
             string strsql = "select Student_Name from student where Student_Roll=" + _Roll;
             _FName  = db.DB_GetAValue (strsql);
             strsql = "select gender from student where Student_Roll=" + _Roll;
-            if (db.DB_GetAValue(strsql) == "true")
-                _Gender = true;
-            else
-                _Gender = false;
+           
+                _Gender = db.DB_GetAValue(strsql);
+           
             strsql = "select Phone from student where Student_Roll=" + _Roll;
             _Phone = db.DB_GetAValue(strsql);
 
