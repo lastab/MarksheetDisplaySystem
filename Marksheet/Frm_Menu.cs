@@ -51,12 +51,12 @@ namespace Marksheet
             switch (Global.userType)
             {
 
-                case 1:
+                case "teacher":
 
                     btnAddStudent.Enabled = false;
                     btnAddSubject.Enabled = false;
                     break;
-                case 0:
+                case "student":
 
                     btnEnterMarks.Enabled = false;
                     btnAddStudent.Enabled = false;

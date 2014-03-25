@@ -39,23 +39,27 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMarks
             // 
-            this.dgvMarks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMarks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarks.Location = new System.Drawing.Point(6, 94);
+            this.dgvMarks.Location = new System.Drawing.Point(13, 126);
             this.dgvMarks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvMarks.Name = "dgvMarks";
-            this.dgvMarks.Size = new System.Drawing.Size(894, 195);
+            this.dgvMarks.Size = new System.Drawing.Size(1023, 195);
             this.dgvMarks.TabIndex = 0;
+            this.dgvMarks.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarks_CellContentDoubleClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 20);
+            this.label2.Location = new System.Drawing.Point(48, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
@@ -65,17 +69,17 @@
             // cbRollNo
             // 
             this.cbRollNo.FormattingEnabled = true;
-            this.cbRollNo.Location = new System.Drawing.Point(109, 18);
-            this.cbRollNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbRollNo.Location = new System.Drawing.Point(125, 57);
+            this.cbRollNo.Margin = new System.Windows.Forms.Padding(2);
             this.cbRollNo.Name = "cbRollNo";
             this.cbRollNo.Size = new System.Drawing.Size(142, 28);
-            this.cbRollNo.TabIndex = 7;
+            this.cbRollNo.TabIndex = 1;
             this.cbRollNo.SelectedIndexChanged += new System.EventHandler(this.cbRollNo_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(266, 20);
+            this.label1.Location = new System.Drawing.Point(282, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 20);
@@ -85,7 +89,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(382, 20);
+            this.lblName.Location = new System.Drawing.Point(398, 59);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(49, 20);
@@ -95,7 +99,7 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(107, 57);
+            this.lblGender.Location = new System.Drawing.Point(123, 96);
             this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(49, 20);
@@ -105,7 +109,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 57);
+            this.label5.Location = new System.Drawing.Point(48, 96);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 20);
@@ -115,7 +119,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(335, 57);
+            this.lblPhone.Location = new System.Drawing.Point(293, 96);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(49, 20);
@@ -125,7 +129,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(266, 57);
+            this.label6.Location = new System.Drawing.Point(226, 96);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 20);
@@ -135,7 +139,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(528, 57);
+            this.lblAddress.Location = new System.Drawing.Point(499, 96);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(49, 20);
@@ -145,18 +149,39 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(459, 57);
+            this.label7.Location = new System.Drawing.Point(419, 96);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 20);
             this.label7.TabIndex = 14;
             this.label7.Text = "Address:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Marksheet.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(900, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(172, 103);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(119, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(223, 31);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Student\'s Marks";
+            // 
             // Frm_Display_Marks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 345);
+            this.ClientSize = new System.Drawing.Size(1053, 345);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblPhone);
@@ -171,9 +196,10 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Frm_Display_Marks";
-            this.Text = "Frm_Display_Marks";
+            this.Text = "Marksheet: Student\'s Marks";
             this.Load += new System.EventHandler(this.Frm_Display_Marks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +218,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

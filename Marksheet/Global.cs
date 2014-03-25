@@ -14,7 +14,7 @@ namespace Marksheet
         public static frm_Add_Subjects frmAddSubjects;
         public static Frm_Login frmLogin;
         public static Frm_Menu frmMenu;
-        public static int userType;
+        public static string userType;
 
     }
 }

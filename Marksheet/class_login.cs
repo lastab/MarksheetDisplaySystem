@@ -12,12 +12,33 @@ namespace Marksheet
 {
     class class_login
     {
+        private string _user;
+        private string _pass;
+        public string userType
+        {
+            get { return _user; }
+            set { _user = value; }
+        }
+
+        public string Password
+        {
+            set { _pass = value; }
+        }
         database db = new database();
-        public string getPassword(string user)
+        private string getPassword()
         {
             string pass;
-            pass = db.DB_GetAValue("select password from login where user_id='" + user + "';");
+            pass = db.DB_GetAValue("select password from login where user_id='" + _user + "';");
             return pass;
+        }
+
+        public Boolean  checkLoginSuccess()
+        {
+            if (_pass == getPassword())
+                return true ;
+            else
+                return false ;
+
         }
     }
 }

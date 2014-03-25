@@ -14,8 +14,8 @@ namespace Marksheet
 {
     public partial class Frm_Display_Marks : Form
     {
-        class_view_marks classViewMarks = new class_view_marks();
-        class_studnet_details classStudentDetails = new class_studnet_details();
+        class_view_marks ViewMarks = new class_view_marks();
+        class_studnet_details StudentDetails = new class_studnet_details();
         database db = new database();
         public Frm_Display_Marks()
         {
@@ -27,16 +27,16 @@ namespace Marksheet
             DataTable dt = new DataTable();
             if (cbRollNo.Text != "System.Data.DataRowView")
             {
-                classStudentDetails.Roll = Convert.ToInt32(cbRollNo.Text);
-                classViewMarks.Roll = Convert.ToInt32(cbRollNo.Text);
-                dt = classViewMarks.Get_Student_Marks();
+                StudentDetails.Roll = Convert.ToInt32(cbRollNo.Text);
+                ViewMarks.Roll = Convert.ToInt32(cbRollNo.Text);
+                dt = ViewMarks.Get_Student_Marks();
                 dgvMarks.DataSource = dt;
 
-                classStudentDetails.Get_Student_Details();
-                lblName.Text = classStudentDetails.FName;
-                lblGender.Text = classStudentDetails.Gender;
-                lblPhone.Text = classStudentDetails.Phone;
-                lblAddress.Text = classStudentDetails.Address;
+                StudentDetails.Get_Student_Details();
+                lblName.Text = StudentDetails.FName;
+                lblGender.Text = StudentDetails.Gender;
+                lblPhone.Text = StudentDetails.Phone;
+                lblAddress.Text = StudentDetails.Address;
 
 
             }
@@ -46,9 +46,26 @@ namespace Marksheet
         private void Frm_Display_Marks_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = classViewMarks.Get_Student_Roll_With_Marks();
+            dt = ViewMarks.Get_Student_Roll_With_Marks();
             cbRollNo.DataSource = dt;
             cbRollNo.DisplayMember = "Student_Roll";
+        }
+
+        private void dgvMarks_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataTable dt = new DataTable();
+            
+                if(Global.userType!="student")
+                {
+                    if (MessageBox.Show("Do you want to deleate the selected subject marks? ","Delete!",MessageBoxButtons.YesNo )==DialogResult.Yes )
+                    {
+                        ViewMarks.delete_Marks (dgvMarks .CurrentRow.Cells["Sub_code"].Value.ToString());
+                        MessageBox.Show("the selected subject's marks of the student has been dealeated!");
+                        dt = ViewMarks.Get_Student_Marks();
+                        dgvMarks.DataSource = dt;
+                    }
+                }
+            
         }
     }
 }

@@ -77,7 +77,7 @@
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(178, 128);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(182, 31);
+            this.txtFirstName.Size = new System.Drawing.Size(242, 31);
             this.txtFirstName.TabIndex = 2;
             // 
             // label2
@@ -95,7 +95,7 @@
             this.txtRoll.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoll.Location = new System.Drawing.Point(178, 80);
             this.txtRoll.Name = "txtRoll";
-            this.txtRoll.Size = new System.Drawing.Size(100, 31);
+            this.txtRoll.Size = new System.Drawing.Size(141, 31);
             this.txtRoll.TabIndex = 1;
             // 
             // label1
@@ -113,7 +113,7 @@
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(178, 175);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(182, 31);
+            this.txtLastName.Size = new System.Drawing.Size(242, 31);
             this.txtLastName.TabIndex = 4;
             // 
             // label5
@@ -239,7 +239,7 @@
             this.Controls.Add(this.txtRoll);
             this.Controls.Add(this.label1);
             this.Name = "Frm_Add_student";
-            this.Text = "Frm_Add_student";
+            this.Text = "Marksheet: Enter Stdent Details";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

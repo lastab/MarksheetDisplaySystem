@@ -19,17 +19,27 @@ namespace Marksheet
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            class_login classLogin = new class_login();
-            if (rdoAdministrator.Checked == true && classLogin.getPassword("admin") == txtPass.Text)
-            { Global.userType = 2; }
-            else if (rdoTeacher.Checked == true && classLogin.getPassword("teacher") == txtPass.Text)
-            { Global.userType = 1; }
+            class_login cLogin = new class_login();
+            if (rdoAdministrator.Checked == true)
+            { cLogin.userType = "admin"; }
+            else if (rdoTeacher.Checked == true)
+            { cLogin.userType = "teacher"; }
             else
-            { Global.userType = 0; }
+            { cLogin.userType = "student"; }
 
-            Global.frmMenu = new Frm_Menu();
-            Global.frmMenu.Show();
-            this.Hide();
+            cLogin.Password = txtPass.Text;
+            if (cLogin.checkLoginSuccess())
+            {
+                Global.userType = cLogin.userType;
+                MessageBox.Show("Welome " + cLogin.userType + "!");
+                Global.frmMenu = new Frm_Menu();
+                Global.frmMenu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Login Failure!");
+            }
         }
     }
 }

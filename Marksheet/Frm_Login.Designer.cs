@@ -35,6 +35,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,8 @@
             this.groupBox1.Controls.Add(this.rdoStudent);
             this.groupBox1.Controls.Add(this.rdoTeacher);
             this.groupBox1.Controls.Add(this.rdoAdministrator);
-            this.groupBox1.Location = new System.Drawing.Point(42, 48);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(35, 51);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 91);
             this.groupBox1.TabIndex = 4;
@@ -53,9 +55,10 @@
             // rdoStudent
             // 
             this.rdoStudent.AutoSize = true;
+            this.rdoStudent.Checked = true;
             this.rdoStudent.Location = new System.Drawing.Point(44, 65);
             this.rdoStudent.Name = "rdoStudent";
-            this.rdoStudent.Size = new System.Drawing.Size(62, 17);
+            this.rdoStudent.Size = new System.Drawing.Size(76, 22);
             this.rdoStudent.TabIndex = 4;
             this.rdoStudent.TabStop = true;
             this.rdoStudent.Text = "Student";
@@ -66,9 +69,8 @@
             this.rdoTeacher.AutoSize = true;
             this.rdoTeacher.Location = new System.Drawing.Point(44, 42);
             this.rdoTeacher.Name = "rdoTeacher";
-            this.rdoTeacher.Size = new System.Drawing.Size(65, 17);
+            this.rdoTeacher.Size = new System.Drawing.Size(80, 22);
             this.rdoTeacher.TabIndex = 3;
-            this.rdoTeacher.TabStop = true;
             this.rdoTeacher.Text = "Teacher";
             this.rdoTeacher.UseVisualStyleBackColor = true;
             // 
@@ -77,26 +79,27 @@
             this.rdoAdministrator.AutoSize = true;
             this.rdoAdministrator.Location = new System.Drawing.Point(44, 20);
             this.rdoAdministrator.Name = "rdoAdministrator";
-            this.rdoAdministrator.Size = new System.Drawing.Size(85, 17);
+            this.rdoAdministrator.Size = new System.Drawing.Size(113, 22);
             this.rdoAdministrator.TabIndex = 2;
-            this.rdoAdministrator.TabStop = true;
             this.rdoAdministrator.Text = "Administrator";
             this.rdoAdministrator.UseVisualStyleBackColor = true;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(101, 156);
+            this.txtPass.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(116, 156);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '#';
-            this.txtPass.Size = new System.Drawing.Size(100, 20);
-            this.txtPass.TabIndex = 7;
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(100, 26);
+            this.txtPass.TabIndex = 1;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(70, 189);
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(63, 192);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Size = new System.Drawing.Size(81, 27);
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -104,23 +107,35 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 159);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(35, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(64, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 31);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Please Login";
             // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Name = "Frm_Login";
-            this.Text = "FrmLogin";
+            this.Text = "Marksheet: Login";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -137,5 +152,6 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

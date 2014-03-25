@@ -55,9 +55,9 @@
             // txtSubjectCode
             // 
             this.txtSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubjectCode.Location = new System.Drawing.Point(216, 63);
+            this.txtSubjectCode.Location = new System.Drawing.Point(217, 66);
             this.txtSubjectCode.Name = "txtSubjectCode";
-            this.txtSubjectCode.Size = new System.Drawing.Size(100, 38);
+            this.txtSubjectCode.Size = new System.Drawing.Size(153, 38);
             this.txtSubjectCode.TabIndex = 1;
             // 
             // txtSubjectName
@@ -65,7 +65,7 @@
             this.txtSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectName.Location = new System.Drawing.Point(217, 111);
             this.txtSubjectName.Name = "txtSubjectName";
-            this.txtSubjectName.Size = new System.Drawing.Size(180, 38);
+            this.txtSubjectName.Size = new System.Drawing.Size(255, 38);
             this.txtSubjectName.TabIndex = 3;
             // 
             // label2
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 315);
+            this.ClientSize = new System.Drawing.Size(539, 345);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cboHasPractical);
@@ -154,7 +154,7 @@
             this.Controls.Add(this.txtSubjectCode);
             this.Controls.Add(this.label1);
             this.Name = "frm_Add_Subjects";
-            this.Text = "v";
+            this.Text = "Marksheet: Enter Subject Details";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

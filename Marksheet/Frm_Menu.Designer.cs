@@ -112,7 +112,7 @@
             this.Controls.Add(this.btnAddSubject);
             this.Controls.Add(this.btnAddStudent);
             this.Name = "Frm_Menu";
-            this.Text = "Form1";
+            this.Text = "Marksheeet: MENU";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Menu_FormClosing);
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -40,5 +40,13 @@ namespace Marksheet
         
         }
 
+        //To delete selected studnet's selected subject marks
+        public void delete_Marks(string subcode)
+        {
+            string strsql = " delete from student_marks where student_roll="+_roll +" and subject_code='"+subcode +"';";
+            db.DB_Execute(strsql);
+
+        }
+
     }
 }
