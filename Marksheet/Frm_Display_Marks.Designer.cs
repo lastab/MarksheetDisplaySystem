@@ -49,10 +49,10 @@
             // 
             this.dgvMarks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarks.Location = new System.Drawing.Point(13, 126);
+            this.dgvMarks.Location = new System.Drawing.Point(13, 121);
             this.dgvMarks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvMarks.Name = "dgvMarks";
-            this.dgvMarks.Size = new System.Drawing.Size(1023, 195);
+            this.dgvMarks.Size = new System.Drawing.Size(1108, 195);
             this.dgvMarks.TabIndex = 0;
             this.dgvMarks.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarks_CellContentDoubleClick);
             // 
@@ -89,6 +89,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(398, 59);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
@@ -99,6 +100,7 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.Location = new System.Drawing.Point(123, 96);
             this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
@@ -119,6 +121,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.Location = new System.Drawing.Point(293, 96);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
@@ -139,6 +142,7 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(499, 96);
             this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddress.Name = "lblAddress";
@@ -179,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 345);
+            this.ClientSize = new System.Drawing.Size(1132, 398);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pbStudentPhoto);
             this.Controls.Add(this.lblAddress);

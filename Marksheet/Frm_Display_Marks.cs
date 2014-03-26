@@ -39,7 +39,8 @@ namespace Marksheet
                 lblPhone.Text = StudentDetails.Phone;
                 lblAddress.Text = StudentDetails.Address;
 
-
+               // lblTotalCredit.Text = ViewMarks.Clc_total_credit().ToString();
+                //lblCgpa .Text = (ViewMarks.Clc_total_honor_point ()/ViewMarks.Clc_total_credit ()) .ToString();
 
                 if (File.Exists("image\\" + ViewMarks.Roll + ".jpg"))
 

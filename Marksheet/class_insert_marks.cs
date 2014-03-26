@@ -15,12 +15,14 @@ namespace Marksheet
         private int _Roll;
         private string _SubjectName;
         private string _SubjectCode;
-        private int _Attendance;
-        private int _Assignment;
-        private int _TermTestI;
-        private int _TermTestII;
-        private int _Practical;
-        private int _TotalMarks;
+        private float  _Attendance;
+        private float  _Assignment;
+        private float _TermTestI;
+        private float _TermTestII;
+        private float _Practical;
+        private float _TotalTheory;
+        private string _Gpa;
+        private Double   _HonorPoint;
 
         public int Roll
         {
@@ -56,7 +58,7 @@ namespace Marksheet
                 _SubjectCode = value;
             }
         }
-        public int Attendance
+        public float Attendance
         {
             get
             {
@@ -64,21 +66,21 @@ namespace Marksheet
             }
             set
             {
-                _Attendance  = value;
+                _Attendance = value;
             }
         }
-        public int Assignment
+        public float Assignment
         {
             get
             {
-                return _Assignment ;
+                return _Assignment;
             }
             set
             {
-                _Assignment  = value;
+                _Assignment = value;
             }
         }
-        public int TermTestI
+        public float TermTestI
         {
             get
             {
@@ -89,7 +91,7 @@ namespace Marksheet
                 _TermTestI = value;
             }
         }
-        public int TermTestII
+        public float TermTestII
         {
             get
             {
@@ -101,7 +103,7 @@ namespace Marksheet
             }
         }
 
-        public int Practical
+        public float Practical
         {
             get
             {
@@ -112,33 +114,52 @@ namespace Marksheet
                 _Practical = value;
             }
         }
-        public int TotalMarks
+        public float TotalTheory
         {
             get
             {
-                return _TotalMarks;
+                return _TotalTheory;
             }
             set
             {
-                _TotalMarks = value;
+                _TotalTheory = value;
             }
         }
+        public string GPA
+        {
+            get
+            {
+                return _Gpa;
+            }
+            set
+            {
+                _Gpa = value;
+            }
+        }
+
+        public Double   HonorPoint
+        {
+            get
+            {
+                return _HonorPoint;
+            }
+            set
+            {
+                _HonorPoint = value;
+            }
+        }
+
         /// <summary>
         /// Procedures
         /// </summary>
         /// 
-        public void Calculate_Total()
-        {
-          
-                _TotalMarks = _Assignment + _Attendance + TermTestI +TermTestII ;
-          
-        }
+
 
         public string Add_Student_Marks()
         {
             try
             {
-                string strsql = "insert into Student_marks (Subject_Code,Student_Roll,Attandance,Assignment,Term_Test_i,Term_Test_ii,Practical,Total_Percent) values('" + _SubjectCode + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTestI + "," + _TermTestII + "," + _Practical + "," + _TotalMarks + ")";
+                string strsql = "insert into Student_marks (Subject_Code,Student_Roll,Attandance,Assignment,Term_Test_i,Term_Test_ii,Practical,Total_theory,gpa,honor_point) values('" + _SubjectCode + "'," + _Roll + "," + _Attendance + "," + _Assignment + "," + _TermTestI + "," + _TermTestII + "," + _Practical + "," + _TotalTheory + ",'"+_Gpa+"',"+_HonorPoint + ")";
                 db.DB_Execute(strsql);
                 return "inserted";
             }
@@ -151,11 +172,11 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test_i=" + _TermTestI + ",Term_Test_ii=" + _TermTestII + ",Practical=" + _Practical + ",Total_Percent=" + _TotalMarks + " where Subject_Code='" + _SubjectCode+ "' and Student_Roll=" + _Roll + ";";
+                string strsql = "update Student_Marks set Attandance=" + _Attendance + ",Assignment=" + _Assignment + ",Term_Test_i=" + _TermTestI + ",Term_Test_ii=" + _TermTestII + ",Practical=" + _Practical + ",Total_theory=" + _TotalTheory +",gpa='" + _Gpa + "',honor_point=" + _HonorPoint+ " where Subject_Code='" + _SubjectCode + "' and Student_Roll=" + _Roll + ";";
                 db.DB_Execute(strsql);
                 return "updated";
             }
-            catch 
+            catch
             {
                 return "fail";
             }
@@ -164,7 +185,7 @@ namespace Marksheet
         {
             DataTable dt = new DataTable();
             string strsql = "select Student_Roll from student";
-            dt=db.Get_records(strsql);
+            dt = db.Get_records(strsql);
             return dt;
         }
 
@@ -178,7 +199,74 @@ namespace Marksheet
 
         public string Subject_Has_practical()
         {
-            return db.DB_GetAValue("select has_practical from Subject where Subject_Code='" + _SubjectCode  + "';");
+            return db.DB_GetAValue("select has_practical from Subject where Subject_Code='" + _SubjectCode + "';");
+        }
+
+        public void Calculate_Total()
+        {
+            float grandTotal;
+            _TotalTheory = _Assignment + _Attendance + TermTestI + TermTestII;
+            if (Subject_Has_practical() == "true")
+                grandTotal = (_TotalTheory + _Practical) / 110 * 100;
+            else
+                grandTotal = _TotalTheory;
+            if (grandTotal > 90)
+            {
+                _Gpa = "A";
+                _HonorPoint=4.0;
+            }
+            else if (grandTotal > 85)
+            {
+                _Gpa = "A-";
+                _HonorPoint = 3.7;
+            }
+            else if (grandTotal > 80)
+            {
+                _Gpa = "B+";
+                _HonorPoint = 3.3;
+            }
+            else if (grandTotal > 75)
+            {
+                _Gpa = "B";
+                _HonorPoint = 3.0;
+            }
+            else if (grandTotal > 70)
+            {
+                _Gpa = "B-";
+                _HonorPoint = 2.7;
+            }
+            else if (grandTotal > 65)
+            {
+                _Gpa = "C+";
+                _HonorPoint = 2.3;
+            }
+            else if (grandTotal > 60)
+            {
+                _Gpa = "C";
+                _HonorPoint = 2.0;
+            }
+            else if (grandTotal > 55)
+            {
+                _Gpa = "C-";
+                _HonorPoint = 1.7;
+            }
+            else if (grandTotal > 50)
+            {
+                _Gpa = "D+";
+                _HonorPoint = 1.5;
+            }
+            else if (grandTotal > 45)
+            {
+                _Gpa = "D";
+                _HonorPoint = 1.0;
+            }
+            else 
+            {
+                _Gpa = "F";
+                _HonorPoint = 0.0;
+            }
+
+
         }
 
     }
