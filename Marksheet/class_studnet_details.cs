@@ -148,6 +148,9 @@ namespace Marksheet
 
             strsql = "select Address from student where Student_Roll=" + _Roll;
             _Address  = db.DB_GetAValue(strsql);
+
+            strsql = "select DOB from student where Student_Roll=" + _Roll;
+            _DOB = Convert.ToDateTime(db.DB_GetAValue(strsql));
         }
 
 

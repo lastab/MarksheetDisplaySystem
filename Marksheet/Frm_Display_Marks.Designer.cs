@@ -41,6 +41,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pbStudentPhoto = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblCGPA = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblDOB = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentPhoto)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +55,7 @@
             // 
             this.dgvMarks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarks.Location = new System.Drawing.Point(13, 121);
+            this.dgvMarks.Location = new System.Drawing.Point(13, 158);
             this.dgvMarks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvMarks.Name = "dgvMarks";
             this.dgvMarks.Size = new System.Drawing.Size(1108, 195);
@@ -179,11 +185,73 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Student\'s Marks";
             // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(191, 369);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(51, 20);
+            this.lblTotal.TabIndex = 18;
+            this.lblTotal.Text = "label4";
+            // 
+            // lblCGPA
+            // 
+            this.lblCGPA.AutoSize = true;
+            this.lblCGPA.Location = new System.Drawing.Point(374, 369);
+            this.lblCGPA.Name = "lblCGPA";
+            this.lblCGPA.Size = new System.Drawing.Size(51, 20);
+            this.lblCGPA.TabIndex = 19;
+            this.lblCGPA.Text = "label8";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(48, 369);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Total Credit Hours:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(310, 369);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "CGPA:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(48, 133);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 20);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Date of Birth:";
+            // 
+            // lblDOB
+            // 
+            this.lblDOB.AutoSize = true;
+            this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDOB.Location = new System.Drawing.Point(158, 133);
+            this.lblDOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDOB.Name = "lblDOB";
+            this.lblDOB.Size = new System.Drawing.Size(49, 20);
+            this.lblDOB.TabIndex = 23;
+            this.lblDOB.Text = "name";
+            // 
             // Frm_Display_Marks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 398);
+            this.Controls.Add(this.lblDOB);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblCGPA);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pbStudentPhoto);
             this.Controls.Add(this.lblAddress);
@@ -224,5 +292,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pbStudentPhoto;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblCGPA;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblDOB;
     }
 }

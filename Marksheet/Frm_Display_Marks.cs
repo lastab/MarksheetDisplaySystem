@@ -38,15 +38,16 @@ namespace Marksheet
                 lblGender.Text = StudentDetails.Gender;
                 lblPhone.Text = StudentDetails.Phone;
                 lblAddress.Text = StudentDetails.Address;
+                lblDOB.Text = StudentDetails.DOB.ToShortDateString() ;
 
-               // lblTotalCredit.Text = ViewMarks.Clc_total_credit().ToString();
-                //lblCgpa .Text = (ViewMarks.Clc_total_honor_point ()/ViewMarks.Clc_total_credit ()) .ToString();
+               lblTotal .Text = ViewMarks.Clc_total_credit().ToString();
+               lblCGPA.Text = (ViewMarks.Clc_total_pointXcredithr ()/ViewMarks.Clc_total_credit ()) .ToString();
 
                 if (File.Exists("image\\" + ViewMarks.Roll + ".jpg"))
 
                     pbStudentPhoto.Image = Image.FromFile("image\\" + ViewMarks.Roll + ".jpg");
                 else
-                    if (StudentDetails.Gender == "male")
+                    if (StudentDetails.Gender == "Male")
                         pbStudentPhoto.Image = Image.FromFile("image\\110300m.gif");
                     else
                         pbStudentPhoto.Image = Image.FromFile("image\\110300f.gif");

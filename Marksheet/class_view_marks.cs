@@ -56,9 +56,9 @@ namespace Marksheet
         }
 
         //Calculate Total Honor Points
-        public Double Clc_total_honor_point()
+        public Double Clc_total_pointXcredithr()
         {
-            strsql = "select sum(honor_point) from view_marks where student_roll=" + _roll + ";";
+            strsql = "select sum(pointXcredithr) from view_marks where student_roll=" + _roll + ";";
             return Convert.ToDouble (db.DB_GetAValue(strsql));
         }
 
