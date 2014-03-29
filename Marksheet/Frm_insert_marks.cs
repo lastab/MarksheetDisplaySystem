@@ -26,32 +26,33 @@ namespace Marksheet
             
             try
             {
-                InsertMarks.Assignment = Convert.ToInt16(txtAssignment.Text);
-                if (InsertMarks.Assignment > 10)
+                InsertMarks.Assignment = float.Parse(txtAssignment.Text, System.Globalization.CultureInfo.InvariantCulture); 
+                if (InsertMarks.Assignment > 10 || InsertMarks.Assignment<0)
                     errorProvider1.SetError(txtAssignment, "value must be between 0-10");
                 else
                 {
                     errorProvider1.Dispose();
-                    InsertMarks.Attendance = Convert.ToInt16(txtAttendence.Text);
-                    if (InsertMarks.Attendance > 10)
+                    InsertMarks.Attendance = float.Parse(txtAttendence .Text, System.Globalization.CultureInfo.InvariantCulture); ;
+                    if (InsertMarks.Attendance > 10 || InsertMarks.Attendance< 0)
                         errorProvider1.SetError(txtAttendence, "value must be  between 0-10");
                     else
                     {
                         errorProvider1.Dispose();
-                        InsertMarks.TermTestI = Convert.ToInt16(txtTermTestI.Text);
-                        if (InsertMarks.TermTestI > 30)
+                        InsertMarks.TermTestI =float.Parse(txtTermTestI.Text , System.Globalization.CultureInfo.InvariantCulture); 
+                            
+                        if (InsertMarks.TermTestI > 30 || InsertMarks.TermTestI<0)
                             errorProvider1.SetError(txtTermTestI, "value must be  between 0-30");
                         else
                         {
                             errorProvider1.Dispose();
-                            InsertMarks.TermTestII = Convert.ToInt16(txtTermTestII.Text);
-                            if (InsertMarks.TermTestII > 50)
+                            InsertMarks.TermTestII = float.Parse(txtTermTestII.Text, System.Globalization.CultureInfo.InvariantCulture); 
+                            if (InsertMarks.TermTestII > 50 || InsertMarks.TermTestII < 0)
                                 errorProvider1.SetError(txtTermTestII, "value must be  between 0-50");
                             else
                             {
                                 errorProvider1.Dispose();
-                                InsertMarks.Practical = Convert.ToInt16(txtPractical.Text);
-                                if (InsertMarks.Practical > 10)
+                                InsertMarks.Practical = float.Parse(txtPractical.Text, System.Globalization.CultureInfo.InvariantCulture); 
+                                if (InsertMarks.Practical > 10 || InsertMarks.Practical < 0)
                                     errorProvider1.SetError(txtPractical, "value Must be between 0-10");
                                 else
                                 {

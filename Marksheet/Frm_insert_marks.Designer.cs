@@ -60,7 +60,7 @@
             this.txtPractical.Name = "txtPractical";
             this.txtPractical.Size = new System.Drawing.Size(53, 31);
             this.txtPractical.TabIndex = 6;
-            this.txtPractical.Text = "6";
+            this.txtPractical.Text = "0";
             // 
             // label6
             // 
