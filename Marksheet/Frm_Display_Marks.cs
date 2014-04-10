@@ -72,14 +72,19 @@ namespace Marksheet
 
             if (Global.userType != "student")
             {
-                if (MessageBox.Show("Do you want to deleate the selected subject marks? ", "Delete!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to delete the selected subject marks? ", "Delete!", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     ViewMarks.delete_Marks(dgvMarks.CurrentRow.Cells["Sub_code"].Value.ToString());
-                    MessageBox.Show("the selected subject's marks of the student has been dealeated!");
+                    MessageBox.Show("The selected subject's marks of the student has been deleted!");
                     dt = ViewMarks.Get_Student_Marks();
                     dgvMarks.DataSource = dt;
                 }
             }
+
+        }
+
+        private void lblGender_Click(object sender, EventArgs e)
+        {
 
         }
     }
