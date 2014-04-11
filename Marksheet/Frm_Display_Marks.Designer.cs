@@ -47,6 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblDOB = new System.Windows.Forms.Label();
+            this.lblRoll = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentPhoto)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             this.dgvMarks.Location = new System.Drawing.Point(13, 158);
             this.dgvMarks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvMarks.Name = "dgvMarks";
+            this.dgvMarks.ReadOnly = true;
             this.dgvMarks.Size = new System.Drawing.Size(1108, 195);
             this.dgvMarks.TabIndex = 0;
             this.dgvMarks.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarks_CellContentDoubleClick);
@@ -113,7 +115,6 @@
             this.lblGender.Size = new System.Drawing.Size(49, 20);
             this.lblGender.TabIndex = 11;
             this.lblGender.Text = "name";
-            this.lblGender.Click += new System.EventHandler(this.lblGender_Click);
             // 
             // label5
             // 
@@ -169,7 +170,7 @@
             // 
             // pbStudentPhoto
             // 
-            this.pbStudentPhoto.Image = global::Marksheet.Properties.Resources.logo;
+            this.pbStudentPhoto.Image = global::Marksheet.Properties.Resources.no_marks_found;
             this.pbStudentPhoto.Location = new System.Drawing.Point(900, 9);
             this.pbStudentPhoto.Name = "pbStudentPhoto";
             this.pbStudentPhoto.Size = new System.Drawing.Size(172, 103);
@@ -191,18 +192,18 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(191, 369);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(51, 20);
+            this.lblTotal.Size = new System.Drawing.Size(18, 20);
             this.lblTotal.TabIndex = 18;
-            this.lblTotal.Text = "label4";
+            this.lblTotal.Text = "0";
             // 
             // lblCGPA
             // 
             this.lblCGPA.AutoSize = true;
             this.lblCGPA.Location = new System.Drawing.Point(374, 369);
             this.lblCGPA.Name = "lblCGPA";
-            this.lblCGPA.Size = new System.Drawing.Size(51, 20);
+            this.lblCGPA.Size = new System.Drawing.Size(18, 20);
             this.lblCGPA.TabIndex = 19;
-            this.lblCGPA.Text = "label8";
+            this.lblCGPA.Text = "0";
             // 
             // label4
             // 
@@ -242,11 +243,21 @@
             this.lblDOB.TabIndex = 23;
             this.lblDOB.Text = "name";
             // 
+            // lblRoll
+            // 
+            this.lblRoll.AutoSize = true;
+            this.lblRoll.Location = new System.Drawing.Point(123, 60);
+            this.lblRoll.Name = "lblRoll";
+            this.lblRoll.Size = new System.Drawing.Size(60, 20);
+            this.lblRoll.TabIndex = 24;
+            this.lblRoll.Text = "label10";
+            // 
             // Frm_Display_Marks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 398);
+            this.Controls.Add(this.lblRoll);
             this.Controls.Add(this.lblDOB);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -299,5 +310,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblDOB;
+        private System.Windows.Forms.Label lblRoll;
     }
 }

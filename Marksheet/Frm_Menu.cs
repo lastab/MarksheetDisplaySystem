@@ -75,6 +75,11 @@ namespace Marksheet
             
         }
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
  
     }
 }

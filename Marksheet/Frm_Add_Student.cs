@@ -61,6 +61,8 @@ namespace Marksheet
                 
             }
             catch { errorProvider1.SetError(txtRoll, "not valid"); }
+
+            See_All_Students();
         }
 
         private void Frm_Add_student_Load(object sender, EventArgs e)

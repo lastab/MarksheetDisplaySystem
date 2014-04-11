@@ -25,34 +25,12 @@ namespace Marksheet
 
         private void cbRollNo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int roll;
             DataTable dt = new DataTable();
             if (cbRollNo.Text != "System.Data.DataRowView")
             {
-                StudentDetails.Roll = Convert.ToInt32(cbRollNo.Text);
-                ViewMarks.Roll = Convert.ToInt32(cbRollNo.Text);
-                dt = ViewMarks.Get_Student_Marks();
-                dgvMarks.DataSource = dt;
-
-                StudentDetails.Get_Student_Details();
-                lblName.Text = StudentDetails.FName;
-                lblGender.Text = StudentDetails.Gender;
-                lblPhone.Text = StudentDetails.Phone;
-                lblAddress.Text = StudentDetails.Address;
-                lblDOB.Text = StudentDetails.DOB.ToShortDateString() ;
-
-               lblTotal .Text = ViewMarks.Clc_total_credit().ToString();
-               lblCGPA.Text = (ViewMarks.Clc_total_pointXcredithr ()/ViewMarks.Clc_total_credit ()) .ToString();
-
-                if (File.Exists("image\\" + ViewMarks.Roll + ".jpg"))
-
-                    pbStudentPhoto.Image = Image.FromFile("image\\" + ViewMarks.Roll + ".jpg");
-                else
-                    if (StudentDetails.Gender == "Male")
-                        pbStudentPhoto.Image = Image.FromFile("image\\110300m.gif");
-                    else
-                        pbStudentPhoto.Image = Image.FromFile("image\\110300f.gif");
-
-
+                roll=Convert.ToInt32(cbRollNo.Text);
+                Display_Student_Marks(roll);
 
             }
 
@@ -60,17 +38,29 @@ namespace Marksheet
 
         private void Frm_Display_Marks_Load(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt = ViewMarks.Get_Student_Roll_With_Marks();
-            cbRollNo.DataSource = dt;
-            cbRollNo.DisplayMember = "Student_Roll";
+
+            if (Global.userType == "student")
+            {
+                cbRollNo.Visible = false;
+                lblRoll.Text = Global.student_roll;
+                Display_Student_Marks(Convert.ToInt16(Global.student_roll));
+
+            }
+            else
+            {
+                lblRoll.Visible = false;
+                DataTable dt = new DataTable();
+                dt = ViewMarks.Get_Student_Roll_With_Marks();
+                cbRollNo.DataSource = dt;
+                cbRollNo.DisplayMember = "Student_Roll";
+            }
         }
 
         private void dgvMarks_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataTable dt = new DataTable();
 
-            if (Global.userType != "student")
+            if (Global.userType == "teacher" || Global.userType == "admin")
             {
                 if (MessageBox.Show("Do you want to delete the selected subject marks? ", "Delete!", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -83,9 +73,39 @@ namespace Marksheet
 
         }
 
-        private void lblGender_Click(object sender, EventArgs e)
-        {
 
+
+        ///
+        private void Display_Student_Marks(int roll)
+        {
+            DataTable dt = new DataTable();
+            StudentDetails.Roll = roll;
+            ViewMarks.Roll = roll;
+            dt = ViewMarks.Get_Student_Marks();
+            dgvMarks.DataSource = dt;
+
+            StudentDetails.Get_Student_Details();
+            lblName.Text = StudentDetails.FName;
+            lblGender.Text = StudentDetails.Gender;
+            lblPhone.Text = StudentDetails.Phone;
+            lblAddress.Text = StudentDetails.Address;
+            lblDOB.Text = StudentDetails.DOB.ToShortDateString();
+
+            lblTotal.Text = ViewMarks.Clc_total_credit().ToString();
+            lblCGPA.Text = (ViewMarks.Clc_total_pointXcredithr() / ViewMarks.Clc_total_credit()).ToString();
+
+            if (File.Exists("image\\" + ViewMarks.Roll + ".jpg"))
+
+                pbStudentPhoto.Image = Image.FromFile("image\\" + ViewMarks.Roll + ".jpg");
+            else
+                if (StudentDetails.Gender == "Male")
+                    pbStudentPhoto.Image = Image.FromFile("image\\110300m.gif");
+                else
+                    pbStudentPhoto.Image = Image.FromFile("image\\110300f.gif");
+
+        
         }
+
+        
     }
 }

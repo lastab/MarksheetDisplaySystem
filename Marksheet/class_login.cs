@@ -40,5 +40,15 @@ namespace Marksheet
                 return false ;
 
         }
+
+        public Boolean checkStudentLoginSuccess(string roll, DateTime DOB)
+        {
+            DateTime checkDOB = Convert .ToDateTime ( db.DB_GetAValue("select DOB from student where student_roll=" + roll));
+            
+            if (checkDOB.ToShortDateString ()  == DOB.ToShortDateString ())
+                return true;
+            else
+                return false;
+        }
     }
 }

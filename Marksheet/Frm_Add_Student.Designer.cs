@@ -174,16 +174,19 @@
             // 
             // dtpDOB
             // 
+            this.dtpDOB.CustomFormat = "dd/mm/yyyy";
             this.dtpDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDOB.Location = new System.Drawing.Point(166, 314);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(270, 31);
+            this.dtpDOB.Size = new System.Drawing.Size(153, 31);
             this.dtpDOB.TabIndex = 7;
+            this.dtpDOB.Value = new System.DateTime(1992, 1, 1, 0, 0, 0, 0);
             // 
             // txtPhone
             // 
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(176, 396);
+            this.txtPhone.Location = new System.Drawing.Point(166, 399);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(182, 31);
             this.txtPhone.TabIndex = 9;
@@ -201,9 +204,9 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(175, 354);
+            this.txtAddress.Location = new System.Drawing.Point(166, 354);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(297, 31);
+            this.txtAddress.Size = new System.Drawing.Size(254, 31);
             this.txtAddress.TabIndex = 8;
             // 
             // label8
@@ -222,9 +225,12 @@
             // 
             // dgvStudentDetails
             // 
+            this.dgvStudentDetails.AllowUserToAddRows = false;
+            this.dgvStudentDetails.AllowUserToDeleteRows = false;
             this.dgvStudentDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudentDetails.Location = new System.Drawing.Point(474, 29);
+            this.dgvStudentDetails.Location = new System.Drawing.Point(426, 44);
             this.dgvStudentDetails.Name = "dgvStudentDetails";
+            this.dgvStudentDetails.ReadOnly = true;
             this.dgvStudentDetails.Size = new System.Drawing.Size(648, 316);
             this.dgvStudentDetails.TabIndex = 31;
             // 
@@ -232,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1196, 508);
+            this.ClientSize = new System.Drawing.Size(1093, 508);
             this.Controls.Add(this.dgvStudentDetails);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label7);

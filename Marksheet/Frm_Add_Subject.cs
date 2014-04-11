@@ -47,8 +47,8 @@ namespace Marksheet
                         if (SubjectDetails.Add_Subject_Details() == "inserted")
                             MessageBox.Show("Success!");
                         else
-                            if (MessageBox.Show("The data of '" + SubjectDetails.SubjectCode    + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                            MessageBox.Show(SubjectDetails.Update_Subject_Details());
+                            if (MessageBox.Show("The data of '" + SubjectDetails.SubjectCode + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                MessageBox.Show(SubjectDetails.Update_Subject_Details());
 
                         txtSubjectCode.Text = "";
                         txtSubjectName.Text = "";
@@ -58,14 +58,10 @@ namespace Marksheet
                         errorProvider1.SetError(cbCreditHour, "not valid");
                     }
                 }
-                
+                See_All_Subjects();
+            }
         }
-    }
-        private void Frm_Add_Subject_Load(object sender, EventArgs e)
-        {
-            See_All_Subjects();
-
-        }
+        
         private void See_All_Subjects()
         {
             DataTable dt = new DataTable();
@@ -74,5 +70,12 @@ namespace Marksheet
 
 
         }
-}
+
+        private void frm_Add_Subjects_Load(object sender, EventArgs e)
+        {
+            See_All_Subjects();
+        }
+
+       
+    }
 }

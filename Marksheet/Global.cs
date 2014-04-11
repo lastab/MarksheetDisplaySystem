@@ -15,6 +15,7 @@ namespace Marksheet
         public static Frm_Login frmLogin;
         public static Frm_Menu frmMenu;
         public static string userType;
+        public static string  student_roll;
 
     }
 }

@@ -143,17 +143,21 @@
             // 
             // dgvSubjectDetails
             // 
+            this.dgvSubjectDetails.AllowUserToAddRows = false;
+            this.dgvSubjectDetails.AllowUserToDeleteRows = false;
+            this.dgvSubjectDetails.AllowUserToOrderColumns = true;
             this.dgvSubjectDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubjectDetails.Location = new System.Drawing.Point(497, 12);
             this.dgvSubjectDetails.Name = "dgvSubjectDetails";
-            this.dgvSubjectDetails.Size = new System.Drawing.Size(687, 318);
+            this.dgvSubjectDetails.ReadOnly = true;
+            this.dgvSubjectDetails.Size = new System.Drawing.Size(492, 318);
             this.dgvSubjectDetails.TabIndex = 11;
             // 
             // frm_Add_Subjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1196, 358);
+            this.ClientSize = new System.Drawing.Size(1002, 358);
             this.Controls.Add(this.dgvSubjectDetails);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSave);
@@ -166,6 +170,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_Add_Subjects";
             this.Text = "Marksheet: Enter Subject Details";
+            this.Load += new System.EventHandler(this.frm_Add_Subjects_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectDetails)).EndInit();
             this.ResumeLayout(false);

@@ -12,6 +12,7 @@ namespace Marksheet
 {
     public partial class Frm_Login : Form
     {
+        class_login cLogin = new class_login();
         public Frm_Login()
         {
             InitializeComponent();
@@ -19,13 +20,12 @@ namespace Marksheet
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            class_login cLogin = new class_login();
+            
             if (rdoAdministrator.Checked == true)
             { cLogin.userType = "admin"; }
             else if (rdoTeacher.Checked == true)
             { cLogin.userType = "teacher"; }
-            else
-            { cLogin.userType = "student"; }
+           
 
             cLogin.Password = txtPass.Text;
             if (cLogin.checkLoginSuccess())
@@ -37,6 +37,27 @@ namespace Marksheet
                 this.Hide();
             }
             else
+            {
+                MessageBox.Show("Login Failure!");
+            }
+        }
+
+        private void btnStudentLogin_Click(object sender, EventArgs e)
+        {
+            string roll;
+            DateTime DOB;
+            roll = txt_roll.Text;
+            DOB = dtpDOB.Value;
+            if (cLogin.checkStudentLoginSuccess(roll, DOB))
+            {
+                MessageBox.Show("Login success!");
+                Global.userType = "student";
+                Global.student_roll=roll ;
+                Global.frmMenu = new Frm_Menu();
+                Global.frmMenu.Show();
+                this.Hide();
+            }
+            else 
             {
                 MessageBox.Show("Login Failure!");
             }
