@@ -113,6 +113,7 @@
             this.lblGender.Size = new System.Drawing.Size(49, 20);
             this.lblGender.TabIndex = 11;
             this.lblGender.Text = "name";
+            this.lblGender.Click += new System.EventHandler(this.lblGender_Click);
             // 
             // label5
             // 

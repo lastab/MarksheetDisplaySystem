@@ -55,11 +55,24 @@ namespace Marksheet
                     }
                     else
                     {
-                        errorProvider1.SetError(cbCreditHour, "not valied");
+                        errorProvider1.SetError(cbCreditHour, "not valid");
                     }
                 }
-
-            }
+                
         }
     }
+        private void Frm_Add_Subject_Load(object sender, EventArgs e)
+        {
+            See_All_Subjects();
+
+        }
+        private void See_All_Subjects()
+        {
+            DataTable dt = new DataTable();
+            dt = SubjectDetails.Get_All_Subject_Details();
+            dgvSubjectDetails.DataSource = dt;
+
+
+        }
+}
 }

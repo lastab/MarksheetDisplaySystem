@@ -60,7 +60,22 @@ namespace Marksheet
                 }
                 
             }
-            catch { errorProvider1.SetError(txtRoll, "not valied"); }
+            catch { errorProvider1.SetError(txtRoll, "not valid"); }
         }
+
+        private void Frm_Add_student_Load(object sender, EventArgs e)
+        {
+            See_All_Students(); 
+            
+        }
+        private void See_All_Students()
+
+    {
+        DataTable dt = new DataTable();
+        dt = studentDetails.Get_All_Student_Details();
+        dgvStudentDetails.DataSource = dt;
+
     }
+    }
+
 }

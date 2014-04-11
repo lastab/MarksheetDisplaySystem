@@ -47,8 +47,10 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dgvStudentDetails = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -175,7 +177,7 @@
             this.dtpDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDOB.Location = new System.Drawing.Point(166, 314);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(361, 31);
+            this.dtpDOB.Size = new System.Drawing.Size(270, 31);
             this.dtpDOB.TabIndex = 7;
             // 
             // txtPhone
@@ -218,11 +220,20 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // dgvStudentDetails
+            // 
+            this.dgvStudentDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudentDetails.Location = new System.Drawing.Point(474, 29);
+            this.dgvStudentDetails.Name = "dgvStudentDetails";
+            this.dgvStudentDetails.Size = new System.Drawing.Size(648, 316);
+            this.dgvStudentDetails.TabIndex = 31;
+            // 
             // Frm_Add_student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 508);
+            this.ClientSize = new System.Drawing.Size(1196, 508);
+            this.Controls.Add(this.dgvStudentDetails);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtAddress);
@@ -240,9 +251,11 @@
             this.Controls.Add(this.label1);
             this.Name = "Frm_Add_student";
             this.Text = "Marksheet: Enter Stdent Details";
+            this.Load += new System.EventHandler(this.Frm_Add_student_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +281,6 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridView dgvStudentDetails;
     }
 }

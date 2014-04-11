@@ -18,6 +18,7 @@ namespace Marksheet
         private DateTime _DOB;
         private string _Address;
         private string _Phone;
+        private string strsql;
 
         public int Roll
         {
@@ -105,7 +106,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "insert into Student (Student_Roll,Student_Name,Gender,Dob,Address,Phone) values(" + _Roll + ",'" + _FName + " " + _LName + "','" + _Gender + "','" + _DOB + "','" + _Address + "','" + _Phone + "')";
+                strsql = "insert into Student (Student_Roll,Student_Name,Gender,Dob,Address,Phone) values(" + _Roll + ",'" + _FName + " " + _LName + "','" + _Gender + "','" + _DOB + "','" + _Address + "','" + _Phone + "')";
 
 
                 db.DB_Execute(strsql);
@@ -120,7 +121,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "update Student set Student_Name='" + _FName + " " + _LName + "',Gender='" + _Gender + "',Dob='" + _DOB + "',Address='" + _Address + "',Phone='" + _Phone + "' where Student_Roll=" + _Roll + ";";
+                strsql = "update Student set Student_Name='" + _FName + " " + _LName + "',Gender='" + _Gender + "',Dob='" + _DOB + "',Address='" + _Address + "',Phone='" + _Phone + "' where Student_Roll=" + _Roll + ";";
                 db.DB_Execute(strsql);
                 return "updated";
             }
@@ -137,7 +138,7 @@ namespace Marksheet
         //To generate student's details
         public void  Get_Student_Details()
         {
-            string strsql = "select Student_Name from student where Student_Roll=" + _Roll;
+            strsql = "select Student_Name from student where Student_Roll=" + _Roll;
             _FName  = db.DB_GetAValue (strsql);
             strsql = "select gender from student where Student_Roll=" + _Roll;
            
@@ -153,6 +154,16 @@ namespace Marksheet
             _DOB = Convert.ToDateTime(db.DB_GetAValue(strsql));
         }
 
+
+
+        public DataTable Get_All_Student_Details()
+        {
+            DataTable dt = new DataTable();
+            strsql = "select * from student;";
+            dt = db.Get_records(strsql);
+            return dt;
+
+        }
 
 
 

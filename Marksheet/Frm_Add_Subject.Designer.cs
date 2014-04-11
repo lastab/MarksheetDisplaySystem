@@ -39,7 +39,9 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dgvSubjectDetails = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -139,11 +141,20 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // dgvSubjectDetails
+            // 
+            this.dgvSubjectDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubjectDetails.Location = new System.Drawing.Point(497, 12);
+            this.dgvSubjectDetails.Name = "dgvSubjectDetails";
+            this.dgvSubjectDetails.Size = new System.Drawing.Size(687, 318);
+            this.dgvSubjectDetails.TabIndex = 11;
+            // 
             // frm_Add_Subjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 345);
+            this.ClientSize = new System.Drawing.Size(1196, 358);
+            this.Controls.Add(this.dgvSubjectDetails);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cboHasPractical);
@@ -156,6 +167,7 @@
             this.Name = "frm_Add_Subjects";
             this.Text = "Marksheet: Enter Subject Details";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +185,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridView dgvSubjectDetails;
     }
 }

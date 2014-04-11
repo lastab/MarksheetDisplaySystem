@@ -17,6 +17,7 @@ namespace Marksheet
         private string _SubjectName;
         private int  _CreditHour;
         private Boolean _HasPractical;
+        private string strsql;
 
         public string SubjectCode
         {
@@ -93,6 +94,13 @@ namespace Marksheet
                 return "fail";
             }
         }
+        public DataTable Get_All_Subject_Details()
+        {
+            DataTable dt = new DataTable();
+            strsql = "select * from Subject;";
+            dt = db.Get_records(strsql);
+            return dt;
 
+        }
     }
 }

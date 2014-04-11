@@ -52,3 +52,17 @@ E:\batsal\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Insert_marks.resources
 E:\batsal\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Menu.resources
 E:\batsal\marksheet\Marksheet\obj\Debug\Marksheet.Properties.Resources.resources
 E:\batsal\marksheet\Marksheet\obj\Debug\Marksheet.csproj.GenerateResource.Cache
+D:\project\marksheet\Marksheet\bin\Debug\Marksheet.exe.config
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.exe
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.pdb
+D:\project\marksheet\Marksheet\bin\Debug\Marksheet.exe
+D:\project\marksheet\Marksheet\bin\Debug\Marksheet.pdb
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.csprojResolveAssemblyReference.cache
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Login.resources
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Add_student.resources
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.frm_Add_Subjects.resources
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Display_Marks.resources
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Insert_marks.resources
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.Frm_Menu.resources
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.Properties.Resources.resources
+D:\project\marksheet\Marksheet\obj\Debug\Marksheet.csproj.GenerateResource.Cache
