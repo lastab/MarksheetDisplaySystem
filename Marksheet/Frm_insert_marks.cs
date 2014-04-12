@@ -69,6 +69,7 @@ namespace Marksheet
                                     txtAttendence.Text = "0";
                                     txtPractical.Text = "0";
                                     txtTermTestI.Text = "0";
+                                    txtTermTestII.Text = "0";
                                 }
 
                             }
