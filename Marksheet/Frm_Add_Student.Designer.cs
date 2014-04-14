@@ -233,6 +233,7 @@
             this.dgvStudentDetails.ReadOnly = true;
             this.dgvStudentDetails.Size = new System.Drawing.Size(648, 316);
             this.dgvStudentDetails.TabIndex = 31;
+            this.dgvStudentDetails.DoubleClick += new System.EventHandler(this.dgvStudentDetails_DoubleClick);
             // 
             // Frm_Add_student
             // 

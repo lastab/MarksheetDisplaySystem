@@ -76,6 +76,16 @@ namespace Marksheet
             See_All_Subjects();
         }
 
+        private void dgvSubjectDetails_DoubleClick(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to delete the selected Subject's Deteails? ", "Delete!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                SubjectDetails .SubjectCode  = dgvSubjectDetails.CurrentRow.Cells["Subject_code"].Value.ToString ();
+                MessageBox .Show ( SubjectDetails .Delete_Subject_Details ());
+                See_All_Subjects ();
+            }
+        }
+
        
     }
 }

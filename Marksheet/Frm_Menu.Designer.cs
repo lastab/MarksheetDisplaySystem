@@ -43,9 +43,9 @@
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStudent.Location = new System.Drawing.Point(71, 157);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(132, 53);
+            this.btnAddStudent.Size = new System.Drawing.Size(159, 53);
             this.btnAddStudent.TabIndex = 0;
-            this.btnAddStudent.Text = "Add Students";
+            this.btnAddStudent.Text = "Add/Edit/Delete Students";
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
@@ -54,9 +54,9 @@
             this.btnAddSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSubject.Location = new System.Drawing.Point(71, 216);
             this.btnAddSubject.Name = "btnAddSubject";
-            this.btnAddSubject.Size = new System.Drawing.Size(132, 55);
+            this.btnAddSubject.Size = new System.Drawing.Size(159, 55);
             this.btnAddSubject.TabIndex = 1;
-            this.btnAddSubject.Text = "Add Subjects";
+            this.btnAddSubject.Text = "Add/Edit/Delete Subjects";
             this.btnAddSubject.UseVisualStyleBackColor = true;
             this.btnAddSubject.Click += new System.EventHandler(this.btnAddSubject_Click);
             // 

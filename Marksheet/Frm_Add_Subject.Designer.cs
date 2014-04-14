@@ -152,6 +152,7 @@
             this.dgvSubjectDetails.ReadOnly = true;
             this.dgvSubjectDetails.Size = new System.Drawing.Size(492, 318);
             this.dgvSubjectDetails.TabIndex = 11;
+            this.dgvSubjectDetails.DoubleClick += new System.EventHandler(this.dgvSubjectDetails_DoubleClick);
             // 
             // frm_Add_Subjects
             // 

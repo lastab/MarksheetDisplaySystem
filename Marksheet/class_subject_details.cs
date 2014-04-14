@@ -85,7 +85,7 @@ namespace Marksheet
         {
             try
             {
-                string strsql = "update Subject set Subject_Code='" + _SubjectCode +  "',Credit_Hour=" + _CreditHour + ",has_Practical=" + _HasPractical + " where Subject_Name='" + _SubjectName +"';";
+                string strsql = "update Subject set Subject_Name='" + _SubjectName  +  "',Credit_Hour=" + _CreditHour + ",has_Practical=" + _HasPractical + " where Subject_Code='" + _SubjectCode  +"';";
                 db.DB_Execute(strsql);
                 return "updated";
             }
@@ -94,6 +94,21 @@ namespace Marksheet
                 return "fail";
             }
         }
+
+        public string Delete_Subject_Details()
+        {
+            try
+            {
+                string strsql = "delete from Subject where Subject_Code='" + _SubjectCode + "';";
+                db.DB_Execute(strsql);
+                return "Deleted";
+            }
+            catch
+            {
+                return "fail";
+            }
+        }
+
         public DataTable Get_All_Subject_Details()
         {
             DataTable dt = new DataTable();

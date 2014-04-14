@@ -174,6 +174,7 @@
             this.pbStudentPhoto.Location = new System.Drawing.Point(900, 9);
             this.pbStudentPhoto.Name = "pbStudentPhoto";
             this.pbStudentPhoto.Size = new System.Drawing.Size(172, 103);
+            this.pbStudentPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbStudentPhoto.TabIndex = 16;
             this.pbStudentPhoto.TabStop = false;
             // 

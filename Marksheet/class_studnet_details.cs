@@ -135,6 +135,25 @@ namespace Marksheet
 
         }
 
+
+        public string Delete_Student_Details()
+        {
+            try
+            {
+                strsql = "delete from Student where Student_Roll=" + _Roll + ";";
+                db.DB_Execute(strsql);
+                return "deleted";
+            }
+            catch
+            {
+                return "fail";
+
+            }
+
+
+
+        }
+
         //To generate student's details
         public void  Get_Student_Details()
         {
