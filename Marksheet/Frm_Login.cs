@@ -20,18 +20,20 @@ namespace Marksheet
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            cLogin.userName = txtUser.Text;
+                        /*
             if (rdoAdministrator.Checked == true)
             { cLogin.userType = "admin"; }
             else if (rdoTeacher.Checked == true)
             { cLogin.userType = "teacher"; }
            
-
+            */
             cLogin.Password = txtPass.Text;
             if (cLogin.checkLoginSuccess())
             {
+                cLogin.getUserType();
                 Global.userType = cLogin.userType;
-                MessageBox.Show("Welome " + cLogin.userType + "!","Welcome!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Welome " + cLogin.userName + "!","Welcome!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 Global.frmMenu = new Frm_Menu();
                 Global.frmMenu.Show();
                 this.Hide();
@@ -40,6 +42,7 @@ namespace Marksheet
             {
                 MessageBox.Show("Login Failure!","Failure",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+
         }
 
         private void btnStudentLogin_Click(object sender, EventArgs e)

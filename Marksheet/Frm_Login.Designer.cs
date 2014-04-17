@@ -28,60 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdoTeacher = new System.Windows.Forms.RadioButton();
-            this.rdoAdministrator = new System.Windows.Forms.RadioButton();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnStudentLogin = new System.Windows.Forms.Button();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.txt_roll = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rdoTeacher);
-            this.groupBox1.Controls.Add(this.rdoAdministrator);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 15);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 91);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "User Type";
-            // 
-            // rdoTeacher
-            // 
-            this.rdoTeacher.AutoSize = true;
-            this.rdoTeacher.Location = new System.Drawing.Point(44, 42);
-            this.rdoTeacher.Name = "rdoTeacher";
-            this.rdoTeacher.Size = new System.Drawing.Size(80, 22);
-            this.rdoTeacher.TabIndex = 3;
-            this.rdoTeacher.Text = "Teacher";
-            this.rdoTeacher.UseVisualStyleBackColor = true;
-            // 
-            // rdoAdministrator
-            // 
-            this.rdoAdministrator.AutoSize = true;
-            this.rdoAdministrator.Checked = true;
-            this.rdoAdministrator.Location = new System.Drawing.Point(44, 20);
-            this.rdoAdministrator.Name = "rdoAdministrator";
-            this.rdoAdministrator.Size = new System.Drawing.Size(113, 22);
-            this.rdoAdministrator.TabIndex = 2;
-            this.rdoAdministrator.TabStop = true;
-            this.rdoAdministrator.Text = "Administrator";
-            this.rdoAdministrator.UseVisualStyleBackColor = true;
             // 
             // txtPass
             // 
@@ -136,7 +100,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.txtUser);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.btnLogin);
             this.tabPage1.Controls.Add(this.txtPass);
@@ -147,6 +112,23 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Admin";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 18);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "User Name:";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(100, 61);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(130, 29);
+            this.txtUser.TabIndex = 8;
             // 
             // tabPage2
             // 
@@ -221,8 +203,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Frm_Login";
             this.Text = "Marksheet: Login";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -235,9 +215,6 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdoTeacher;
-        private System.Windows.Forms.RadioButton rdoAdministrator;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
@@ -250,5 +227,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnStudentLogin;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtUser;
     }
 }
