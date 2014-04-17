@@ -31,14 +31,14 @@ namespace Marksheet
             if (cLogin.checkLoginSuccess())
             {
                 Global.userType = cLogin.userType;
-                MessageBox.Show("Welome " + cLogin.userType + "!");
+                MessageBox.Show("Welome " + cLogin.userType + "!","Welcome!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 Global.frmMenu = new Frm_Menu();
                 Global.frmMenu.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Login Failure!");
+                MessageBox.Show("Login Failure!","Failure",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

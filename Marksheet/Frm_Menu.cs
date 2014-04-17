@@ -77,7 +77,9 @@ namespace Marksheet
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Logout Successful", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.Restart();
+            
         }
 
  

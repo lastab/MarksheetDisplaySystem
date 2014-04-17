@@ -45,9 +45,9 @@ namespace Marksheet
                         studentDetails.Address = txtAddress.Text;
                         studentDetails.Phone = txtPhone.Text;
                         if (studentDetails.Add_Student_Details() == "inserted")
-                            MessageBox.Show("Success!");
+                            MessageBox.Show("The data has been successfully added!","Success",MessageBoxButtons.OK , MessageBoxIcon.Information);
                         else
-                           if ( MessageBox.Show("The data of roll:'"+studentDetails.Roll +"' already exists\n"+"Do you want to update the information? ","The Data already exists.",MessageBoxButtons.YesNo)==DialogResult.Yes)
+                           if ( MessageBox.Show("The data of roll:'"+studentDetails.Roll +"' already exists\n"+"Do you want to update the information? ","The Data already exists.",MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
                             MessageBox.Show(studentDetails.Update_Student_Details());
 
 
@@ -81,7 +81,7 @@ namespace Marksheet
 
         private void dgvStudentDetails_DoubleClick(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to delete the selected Student's Deteails? ", "Delete!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to delete the selected Student's Deteails? ", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question ) == DialogResult.Yes)
             {
                 studentDetails.Roll = Convert.ToInt32 (dgvStudentDetails.CurrentRow.Cells["Student_Roll"].Value);
                MessageBox.Show ( studentDetails.Delete_Student_Details());

@@ -45,9 +45,9 @@ namespace Marksheet
                         SubjectDetails.HasPractical = cboHasPractical.Checked;
 
                         if (SubjectDetails.Add_Subject_Details() == "inserted")
-                            MessageBox.Show("Success!");
+                            MessageBox.Show("The data had been successfully added!","Success!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         else
-                            if (MessageBox.Show("The data of '" + SubjectDetails.SubjectCode + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            if (MessageBox.Show("The data of '" + SubjectDetails.SubjectCode + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                 MessageBox.Show(SubjectDetails.Update_Subject_Details());
 
                         txtSubjectCode.Text = "";
@@ -78,7 +78,7 @@ namespace Marksheet
 
         private void dgvSubjectDetails_DoubleClick(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to delete the selected Subject's Deteails? ", "Delete!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to delete the selected Subject's Deteails? ", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 SubjectDetails .SubjectCode  = dgvSubjectDetails.CurrentRow.Cells["Subject_code"].Value.ToString ();
                 MessageBox .Show ( SubjectDetails .Delete_Subject_Details ());

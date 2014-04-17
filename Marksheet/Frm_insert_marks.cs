@@ -60,9 +60,9 @@ namespace Marksheet
                                     InsertMarks.Calculate_Total();
 
                                     if (InsertMarks.Add_Student_Marks() == "inserted")
-                                        MessageBox.Show("Success!");
+                                        MessageBox.Show("The data has been successfully added!","Success!",MessageBoxButtons.OK,MessageBoxIcon.Information );
                                     else
-                                        if (MessageBox.Show("The marks of roll:'" + InsertMarks.Roll + "' and subject:'" + InsertMarks.SubjectName + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                                        if (MessageBox.Show("The marks of roll:'" + InsertMarks.Roll + "' and subject:'" + InsertMarks.SubjectName + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                             MessageBox.Show(InsertMarks.Update_Student_Marks());
 
                                     txtAssignment.Text = "0";
@@ -78,7 +78,7 @@ namespace Marksheet
                 }
             }
             catch
-            { MessageBox.Show("Please enter numeric character"); }
+            { MessageBox.Show("Please enter numeric character","Warning!",MessageBoxButtons.OK, MessageBoxIcon.Warning ); }
         }
 
         private void Frm_insert_marks_Load(object sender, EventArgs e)
