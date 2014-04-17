@@ -43,7 +43,7 @@ namespace Marksheet
             {
                 cbRollNo.Visible = false;
                 lblRoll.Text = Global.student_roll;
-                Display_Student_Marks(Convert.ToInt16(Global.student_roll));
+                Display_Student_Marks(Convert.ToInt32(Global.student_roll));
 
             }
             else
