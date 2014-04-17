@@ -48,7 +48,7 @@ namespace Marksheet
                             MessageBox.Show("The data has been successfully added!","Success",MessageBoxButtons.OK , MessageBoxIcon.Information);
                         else
                            if ( MessageBox.Show("The data of roll:'"+studentDetails.Roll +"' already exists\n"+"Do you want to update the information? ","The Data already exists.",MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
-                            MessageBox.Show(studentDetails.Update_Student_Details());
+                            MessageBox.Show(studentDetails.Update_Student_Details(),"Update!",MessageBoxButtons.OK ,MessageBoxIcon.Information );
 
 
                         txtAddress.Text = "";
@@ -84,7 +84,7 @@ namespace Marksheet
             if (MessageBox.Show("Do you want to delete the selected Student's Deteails? ", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question ) == DialogResult.Yes)
             {
                 studentDetails.Roll = Convert.ToInt32 (dgvStudentDetails.CurrentRow.Cells["Student_Roll"].Value);
-               MessageBox.Show ( studentDetails.Delete_Student_Details());
+               MessageBox.Show ( studentDetails.Delete_Student_Details(),"Deleted",MessageBoxButtons.OK,MessageBoxIcon.Information );
                 See_All_Students();
             }
         }

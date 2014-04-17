@@ -63,7 +63,7 @@ namespace Marksheet
                                         MessageBox.Show("The data has been successfully added!","Success!",MessageBoxButtons.OK,MessageBoxIcon.Information );
                                     else
                                         if (MessageBox.Show("The marks of roll:'" + InsertMarks.Roll + "' and subject:'" + InsertMarks.SubjectName + "' already exists\n" + "Do you want to update the information? ", "The Data already exists.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                                            MessageBox.Show(InsertMarks.Update_Student_Marks());
+                                            MessageBox.Show(InsertMarks.Update_Student_Marks(),"Update!",MessageBoxButtons.OK ,MessageBoxIcon.Information );
 
                                     txtAssignment.Text = "0";
                                     txtAttendence.Text = "0";
