@@ -83,7 +83,7 @@ namespace Marksheet
         {
             if (MessageBox.Show("Do you want to delete the selected Student's Deteails? ", "Delete!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                studentDetails.Roll = Convert.ToInt16 (dgvStudentDetails.CurrentRow.Cells["Student_Roll"].Value);
+                studentDetails.Roll = Convert.ToInt32 (dgvStudentDetails.CurrentRow.Cells["Student_Roll"].Value);
                MessageBox.Show ( studentDetails.Delete_Student_Details());
                 See_All_Students();
             }
