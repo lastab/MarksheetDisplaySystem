@@ -72,7 +72,14 @@ namespace Marksheet
             Connect_to_database();
             cmd.CommandText = strsql;
             cmd.Connection = conn;
-            retval = cmd.ExecuteScalar().ToString();
+            try
+            {
+                retval = cmd.ExecuteScalar().ToString();
+            }
+            catch (Exception e)
+            {
+                retval = null;
+            }
             conn.Close();
             return retval;
         }

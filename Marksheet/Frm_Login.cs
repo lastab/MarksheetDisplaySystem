@@ -50,7 +50,7 @@ namespace Marksheet
             DOB = dtpDOB.Value;
             if (cLogin.checkStudentLoginSuccess(roll, DOB))
             {
-                MessageBox.Show("Login success!");
+                MessageBox.Show("Login success!","Welcome!",MessageBoxButtons.OK,MessageBoxIcon.Information );
                 Global.userType = "student";
                 Global.student_roll=roll ;
                 Global.frmMenu = new Frm_Menu();
@@ -59,7 +59,7 @@ namespace Marksheet
             }
             else 
             {
-                MessageBox.Show("Login Failure!");
+                MessageBox.Show("Login Failure!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
